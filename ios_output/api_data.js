@@ -1355,44 +1355,37 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "object",
-            "optional": false,
-            "field": "delivery_address",
-            "description": "<p>收货地址对象</p>"
-          },
-          {
-            "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "delivery_address.searched_address",
+            "field": "searched_address",
             "description": "<p>搜索地址（google生成，见<code>地点搜索接口</code>）</p>"
           },
           {
             "group": "Parameter",
             "type": "float",
             "optional": false,
-            "field": "delivery_address.searched_address_longitude",
+            "field": "searched_address_longitude",
             "description": "<p>搜索地址的经度（google生成，见<code>地点搜索接口</code>）</p>"
           },
           {
             "group": "Parameter",
             "type": "float",
             "optional": false,
-            "field": "delivery_address.searched_address_latitude",
+            "field": "searched_address_latitude",
             "description": "<p>搜索地址的纬度（google生成，见<code>地点搜索接口</code>）</p>"
           },
           {
             "group": "Parameter",
             "type": "text",
             "optional": false,
-            "field": "delivery_address.detail_address",
+            "field": "detail_address",
             "description": "<p>补充详细地址（如:XX小区16楼26号）</p>"
           },
           {
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "delivery_address.postcode",
+            "field": "postcode",
             "description": "<p>邮编</p>"
           }
         ]
@@ -2093,6 +2086,13 @@ define({ "api": [
             "optional": false,
             "field": "msg",
             "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配给用户的token</p>"
           }
         ]
       },
@@ -2712,6 +2712,12 @@ define({ "api": [
             "optional": false,
             "field": "-1",
             "description": "<p>token失效，需重新登录</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-2",
+            "description": "<p>用户还未指定支付方式</p>"
           }
         ]
       },

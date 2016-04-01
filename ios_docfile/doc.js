@@ -94,6 +94,7 @@ public interface ApiDoc {
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {String} token 系统分配给用户的token
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
 	 * {
@@ -300,6 +301,7 @@ public interface ApiDoc {
 	 *  }
 	 *  
 	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 用户还未指定支付方式
 	 *  @apiErrorExample {json} Error-Response:
 	 *  HTTP/1.1 400 Not Found
 	 *  {
@@ -423,12 +425,11 @@ public interface ApiDoc {
 	 * @apiParam {String} token 系统分配的token
 	 * @apiParam {String} receiver_name 收货人姓名
 	 * @apiParam {String} receiver_phone 收货人电话 
-	 * @apiParam {object} delivery_address 收货地址对象
-	 * @apiParam {String} delivery_address.searched_address 搜索地址（google生成，见<code>地点搜索接口</code>）
-	 * @apiParam {float} delivery_address.searched_address_longitude 搜索地址的经度（google生成，见<code>地点搜索接口</code>）
-	 * @apiParam {float} delivery_address.searched_address_latitude 搜索地址的纬度（google生成，见<code>地点搜索接口</code>）
-	 * @apiParam {text} delivery_address.detail_address 补充详细地址（如:XX小区16楼26号）
-	 * @apiParam {String} delivery_address.postcode 邮编
+	 * @apiParam {String} searched_address 搜索地址（google生成，见<code>地点搜索接口</code>）
+	 * @apiParam {float} searched_address_longitude 搜索地址的经度（google生成，见<code>地点搜索接口</code>）
+	 * @apiParam {float} searched_address_latitude 搜索地址的纬度（google生成，见<code>地点搜索接口</code>）
+	 * @apiParam {text} detail_address 补充详细地址（如:XX小区16楼26号）
+	 * @apiParam {String} postcode 邮编
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
