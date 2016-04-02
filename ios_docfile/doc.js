@@ -615,8 +615,8 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/search_shop_infos 搜索营业中的店铺
-	 * @apiName 搜索营业中的店铺111
+	 * @api {get} /user_serv/search_shop_infos 搜索所有的店铺
+	 * @apiName 搜索所有的店铺111
 	 * @apiGroup Shop_Module
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
@@ -627,7 +627,8 @@ public interface ApiDoc {
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {object[]} shop_info_list 返回店铺信息数组
-	 * @apiSuccess {String} shop_info_list.shop_id 店铺id
+	 * @apiSuccess {int} shop_info_list.shop_id 店铺id
+	 * @apiSuccess {int} shop_info_list.status 店铺状态（0-已关闭，1-营业中）
 	 * @apiSuccess {String} shop_info_list.img 店铺图片
 	 * @apiSuccess {String} shop_info_list.name 店铺名称
 	 * @apiSuccess {String} shop_info_list.address 店铺地址

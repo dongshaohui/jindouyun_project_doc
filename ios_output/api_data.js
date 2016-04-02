@@ -964,6 +964,115 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/search_shop_infos",
+    "title": "搜索所有的店铺",
+    "name": "_______111",
+    "group": "Shop_Module",
+    "version": "0.1.0",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "shop_search_term",
+            "description": "<p>店铺搜索条件</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "shop_info_list",
+            "description": "<p>返回店铺信息数组</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "shop_info_list.shop_id",
+            "description": "<p>店铺id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "shop_info_list.status",
+            "description": "<p>店铺状态（0-已关闭，1-营业中）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.img",
+            "description": "<p>店铺图片</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.name",
+            "description": "<p>店铺名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.address",
+            "description": "<p>店铺地址</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.current_month_order",
+            "description": "<p>当月订单数</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nshop_info_list:[\n\t\t{\n\t\t\tshop_id:12,\t\n\t\t\timg:\"http://XXX.img\",\n\t\t\tname:\"XX牛肉面\",\n\t\t\taddress:\"XXX Street\",\n\t\t\tcurrent_month_order:\"112\"\n\t\t}\n   ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": " HTTP/1.1 400 Not Found\n {\n  }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Shop_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/get_shop_detail_info",
     "title": "获取店铺信息详情",
     "name": "________1",
@@ -1123,108 +1232,6 @@ define({ "api": [
         {
           "title": "Error-Response:",
           "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'shopid无效',\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "filename": "ios_docfile/doc.js",
-    "groupTitle": "Shop_Module"
-  },
-  {
-    "type": "get",
-    "url": "/user_serv/search_shop_infos",
-    "title": "搜索营业中的店铺",
-    "name": "________111",
-    "group": "Shop_Module",
-    "version": "0.1.0",
-    "description": "<p>接口详细描述</p>",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "shop_search_term",
-            "description": "<p>店铺搜索条件</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "code",
-            "description": "<p>结果码</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>消息说明</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "object[]",
-            "optional": false,
-            "field": "shop_info_list",
-            "description": "<p>返回店铺信息数组</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "shop_info_list.shop_id",
-            "description": "<p>店铺id</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "shop_info_list.img",
-            "description": "<p>店铺图片</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "shop_info_list.name",
-            "description": "<p>店铺名称</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "shop_info_list.address",
-            "description": "<p>店铺地址</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "shop_info_list.current_month_order",
-            "description": "<p>当月订单数</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nshop_info_list:[\n\t\t{\n\t\t\tshop_id:12,\t\n\t\t\timg:\"http://XXX.img\",\n\t\t\tname:\"XX牛肉面\",\n\t\t\taddress:\"XXX Street\",\n\t\t\tcurrent_month_order:\"112\"\n\t\t}\n   ]\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "examples": [
-        {
-          "title": "Error-Response:",
-          "content": " HTTP/1.1 400 Not Found\n {\n  }\n]",
           "type": "json"
         }
       ]
