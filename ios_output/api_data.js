@@ -1111,6 +1111,13 @@ define({ "api": [
           },
           {
             "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "status",
+            "description": "<p>店铺状态（0-已关闭，1-营业中）</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "shop_img",
@@ -1270,6 +1277,13 @@ define({ "api": [
             "optional": false,
             "field": "shop_info_list",
             "description": "<p>返回店铺信息数组</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "shop_info_list.status",
+            "description": "<p>店铺状态（0-已关闭，1-营业中）</p>"
           },
           {
             "group": "Success 200",

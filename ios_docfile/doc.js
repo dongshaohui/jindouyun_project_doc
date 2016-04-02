@@ -581,6 +581,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {object[]} shop_info_list 返回店铺信息数组
+	 * @apiSuccess {int} shop_info_list.status 店铺状态（0-已关闭，1-营业中）
 	 * @apiSuccess {String} shop_info_list.shop_id 店铺id
 	 * @apiSuccess {String} shop_info_list.img 店铺图片
 	 * @apiSuccess {String} shop_info_list.name 店铺名称
@@ -673,6 +674,7 @@ public interface ApiDoc {
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} status 店铺状态（0-已关闭，1-营业中）
 	 * @apiSuccess {String} shop_img 商铺图片
 	 * @apiSuccess {String} shop_name 商铺名称
 	 * @apiSuccess {String} shop_feature 商铺特色
