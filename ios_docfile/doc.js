@@ -799,7 +799,6 @@ public interface ApiDoc {
 	 * 
 	 * 
 	 * @apiParam {int} dish_id 菜品id 
-	 * @apiParam {String} dish_search_term 菜品搜索关键词 
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明

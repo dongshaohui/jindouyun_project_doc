@@ -142,13 +142,6 @@ define({ "api": [
             "optional": false,
             "field": "dish_id",
             "description": "<p>菜品id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "dish_search_term",
-            "description": "<p>菜品搜索关键词</p>"
           }
         ]
       }
