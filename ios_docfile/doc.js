@@ -543,6 +543,7 @@ public interface ApiDoc {
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} delivery_address_id 收货地址id
 	 * @apiSuccess {String} username 取货人姓名
 	 * @apiSuccess {String} phone 取货人手机
 	 * @apiSuccess {String} address 取货人地址

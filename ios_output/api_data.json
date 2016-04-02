@@ -1763,6 +1763,13 @@
           },
           {
             "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "delivery_address_id",
+            "description": "<p>收货地址id</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "username",
