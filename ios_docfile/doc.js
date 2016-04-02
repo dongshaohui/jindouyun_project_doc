@@ -368,13 +368,11 @@ public interface ApiDoc {
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {Object} delivery_address_infos 用户支付方式信息对象封装
-	 * @apiSuccess {int} delivery_address_infos.count 用户支付方式的种类数量
-	 * @apiSuccess {objcet[]} delivery_address_infos.infos 用户支付方式信息数组
 	 * @apiSuccess {int} delivery_address_infos.infos.delivery_address_id 收货地址id
-	 * @apiSuccess {String} delivery_address_infos.infos.receiver_name 收货人姓名
-	 * @apiSuccess {String} delivery_address_infos.infos.receiver_phone 收货人电话
-	 * @apiSuccess {String} delivery_address_infos.infos.postcode 邮编
-	 * @apiSuccess {String} delivery_address_infos.infos.address 收货地址
+	 * @apiSuccess {String} delivery_address_infos.receiver_name 收货人姓名
+	 * @apiSuccess {String} delivery_address_infos.receiver_phone 收货人电话
+	 * @apiSuccess {String} delivery_address_infos.postcode 邮编
+	 * @apiSuccess {String} delivery_address_infos.address 收货地址
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
 	 * {

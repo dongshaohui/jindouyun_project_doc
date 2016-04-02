@@ -1577,20 +1577,6 @@ define({ "api": [
             "group": "Success 200",
             "type": "int",
             "optional": false,
-            "field": "delivery_address_infos.count",
-            "description": "<p>用户支付方式的种类数量</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "objcet[]",
-            "optional": false,
-            "field": "delivery_address_infos.infos",
-            "description": "<p>用户支付方式信息数组</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "int",
-            "optional": false,
             "field": "delivery_address_infos.infos.delivery_address_id",
             "description": "<p>收货地址id</p>"
           },
@@ -1598,28 +1584,28 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "delivery_address_infos.infos.receiver_name",
+            "field": "delivery_address_infos.receiver_name",
             "description": "<p>收货人姓名</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "delivery_address_infos.infos.receiver_phone",
+            "field": "delivery_address_infos.receiver_phone",
             "description": "<p>收货人电话</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "delivery_address_infos.infos.postcode",
+            "field": "delivery_address_infos.postcode",
             "description": "<p>邮编</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "delivery_address_infos.infos.address",
+            "field": "delivery_address_infos.address",
             "description": "<p>收货地址</p>"
           }
         ]
