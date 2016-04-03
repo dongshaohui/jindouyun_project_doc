@@ -537,7 +537,7 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "phoneno",
+            "field": "username",
             "description": "<p>商户手机号码</p>"
           },
           {

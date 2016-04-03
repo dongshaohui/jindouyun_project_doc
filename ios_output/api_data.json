@@ -2376,6 +2376,13 @@
             "optional": false,
             "field": "msg",
             "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "pay_type_id",
+            "description": "<p>pay_type的id</p>"
           }
         ]
       },

@@ -14,7 +14,7 @@ public interface ApiDoc {
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
 	 * 
-	 * @apiParam {String} phoneno 商户手机号码 
+	 * @apiParam {String} username 商户手机号码 
 	 * @apiParam {String} password 商户登录密码（明文） 
 	 * 
 	 * @apiSuccess {String} code 结果码

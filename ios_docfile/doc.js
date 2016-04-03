@@ -331,6 +331,7 @@ public interface ApiDoc {
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} pay_type_id pay_type的id
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
 	 * {
