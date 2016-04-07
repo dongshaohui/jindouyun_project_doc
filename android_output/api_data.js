@@ -359,6 +359,41 @@ define({ "api": [
           },
           {
             "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.dishinfos.dish_number",
+            "description": "<p>订单菜品数量</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.dishinfos.dish_type",
+            "description": "<p>订单菜品类型（0-单品菜，1-含配菜）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list",
+            "description": "<p>子菜品列表</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list.name",
+            "description": "<p>子菜品名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list.price",
+            "description": "<p>子菜品价格</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "float",
             "optional": false,
             "field": "orders.list.dishinfos.dish_price",
@@ -687,6 +722,13 @@ define({ "api": [
           },
           {
             "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.order_status",
+            "description": "<p>订单状态（1-新订单，2-已接订单，3-已完成订单，4-已取消的订单）</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "orders.list.ordertime",
@@ -782,6 +824,41 @@ define({ "api": [
             "optional": false,
             "field": "orders.list.dishinfos.dish_name",
             "description": "<p>订单菜品名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.dishinfos.dish_number",
+            "description": "<p>订单菜品数量</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.dishinfos.dish_type",
+            "description": "<p>订单菜品类型（0-单品菜，1-含配菜）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list",
+            "description": "<p>子菜品列表</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list.name",
+            "description": "<p>子菜品名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list.price",
+            "description": "<p>子菜品价格</p>"
           },
           {
             "group": "Success 200",
@@ -1030,6 +1107,13 @@ define({ "api": [
           },
           {
             "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.order_status",
+            "description": "<p>订单状态（1-新订单，2-已接订单，3-已完成订单，4-已取消的订单）</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "orders.list.ordertime",
@@ -1125,6 +1209,41 @@ define({ "api": [
             "optional": false,
             "field": "orders.list.dishinfos.dish_name",
             "description": "<p>订单菜品名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.dishinfos.dish_number",
+            "description": "<p>订单菜品数量</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "orders.list.dishinfos.dish_type",
+            "description": "<p>订单菜品类型（0-单品菜，1-含配菜）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list",
+            "description": "<p>子菜品列表</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list.name",
+            "description": "<p>子菜品名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "orders.list.dishinfos.sub_dish_list.price",
+            "description": "<p>子菜品价格</p>"
           },
           {
             "group": "Success 200",
