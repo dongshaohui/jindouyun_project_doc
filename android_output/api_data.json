@@ -417,7 +417,7 @@
             "group": "Success 200",
             "type": "float",
             "optional": false,
-            "field": "orders.list.price_detail.tax_orice",
+            "field": "orders.list.price_detail.tax_price",
             "description": "<p>订单税费</p>"
           },
           {
@@ -439,7 +439,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n\t\t\t\t  \"order_status\":1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_orice\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
+          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n\t\t\t\t  \"order_status\":1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_price\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
           "type": "json"
         }
       ]
@@ -885,7 +885,7 @@
             "group": "Success 200",
             "type": "float",
             "optional": false,
-            "field": "orders.list.price_detail.tax_orice",
+            "field": "orders.list.price_detail.tax_price",
             "description": "<p>订单税费</p>"
           },
           {
@@ -907,7 +907,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_orice\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
+          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_price\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
           "type": "json"
         }
       ]
@@ -1270,7 +1270,7 @@
             "group": "Success 200",
             "type": "float",
             "optional": false,
-            "field": "orders.list.price_detail.tax_orice",
+            "field": "orders.list.price_detail.tax_price",
             "description": "<p>订单税费</p>"
           },
           {
@@ -1292,7 +1292,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_orice\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
+          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_price\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
           "type": "json"
         }
       ]
@@ -1557,7 +1557,7 @@
             "group": "Success 200",
             "type": "float",
             "optional": false,
-            "field": "orders.list.price_detail.tax_orice",
+            "field": "orders.list.price_detail.tax_price",
             "description": "<p>订单税费</p>"
           },
           {
@@ -1579,7 +1579,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_orice\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
+          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_price\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
           "type": "json"
         }
       ]
@@ -1844,7 +1844,7 @@
             "group": "Success 200",
             "type": "float",
             "optional": false,
-            "field": "orders.list.price_detail.tax_orice",
+            "field": "orders.list.price_detail.tax_price",
             "description": "<p>订单税费</p>"
           },
           {
@@ -1866,7 +1866,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_orice\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
+          "content": " HTTP/1.1 200 OK\n{\n   \"code\": 0,\n   \"token\": \"u1bv1b2308jnikibn213u\",\n   \"msg\": \"success\",\n   \"orders\": {\n       \"count\": 1,\n       \"list\": [\n           {\n               \"orderid\": 1,\n               \"ordertime\": \"2014-12-01 12:00:00\",\n               \"userinfo\": {\n                   \"name\": \"董绍辉\",\n                   \"phoneno\": \"18310702213\"\n               },\n               \"orderaddr\": \"New York XXXX Street\",\n               \"sendtype\": 1,\n               \"paytype\": 1,\n               \"creditcard_info\": {\n                   \"cardno\": \"123123\",\n                   \"pin\": \"123\",\n                   \"validate_year\": \"2020\",\n                   \"validate_month\": \"12\"\n               },\n               \"dishinfos\": [\n                   {\n                       \"dish_name\": \"京酱肉丝\",\n                       \"dish_price\": 23.2\n                   },\n                   {\n                       \"dish_name\": \"鸡蛋饼\",\n                       \"dish_price\": 3.1\n                   }\n               ],\n               \"price_detail\": {\n                   \"dish_total_price\": 26.3,\n                   \"tax_price\": 3,\n                   \"freight_price\": 10,\n                   \"tip_price\": 2\n               }\n           }\n       ]\n   }\n}",
           "type": "json"
         }
       ]

@@ -86,7 +86,7 @@ public interface ApiDoc {
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
-	 * @apiSuccess {float} orders.list.price_detail.tax_orice 订单税费
+	 * @apiSuccess {float} orders.list.price_detail.tax_price 订单税费
 	 * @apiSuccess {float} orders.list.price_detail.freight_price 订单运费
 	 * @apiSuccess {float} orders.list.price_detail.tip_price 订单小费
 	 * @apiSuccessExample Success-Response:
@@ -126,7 +126,7 @@ public interface ApiDoc {
 	 *                ],
 	 *                "price_detail": {
 	 *                    "dish_total_price": 26.3,
-	 *                    "tax_orice": 3,
+	 *                    "tax_price": 3,
 	 *                    "freight_price": 10,
 	 *                    "tip_price": 2
 	 *                }
@@ -188,7 +188,7 @@ public interface ApiDoc {
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
-	 * @apiSuccess {float} orders.list.price_detail.tax_orice 订单税费
+	 * @apiSuccess {float} orders.list.price_detail.tax_price 订单税费
 	 * @apiSuccess {float} orders.list.price_detail.freight_price 订单运费
 	 * @apiSuccess {float} orders.list.price_detail.tip_price 订单小费
 	 * @apiSuccessExample Success-Response:
@@ -228,7 +228,7 @@ public interface ApiDoc {
 	 *                ],
 	 *                "price_detail": {
 	 *                    "dish_total_price": 26.3,
-	 *                    "tax_orice": 3,
+	 *                    "tax_price": 3,
 	 *                    "freight_price": 10,
 	 *                    "tip_price": 2
 	 *                }
@@ -291,7 +291,7 @@ public interface ApiDoc {
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
-	 * @apiSuccess {float} orders.list.price_detail.tax_orice 订单税费
+	 * @apiSuccess {float} orders.list.price_detail.tax_price 订单税费
 	 * @apiSuccess {float} orders.list.price_detail.freight_price 订单运费
 	 * @apiSuccess {float} orders.list.price_detail.tip_price 订单小费
 	 * @apiSuccessExample Success-Response:
@@ -331,7 +331,7 @@ public interface ApiDoc {
 	 *                ],
 	 *                "price_detail": {
 	 *                    "dish_total_price": 26.3,
-	 *                    "tax_orice": 3,
+	 *                    "tax_price": 3,
 	 *                    "freight_price": 10,
 	 *                    "tip_price": 2
 	 *                }
@@ -395,7 +395,7 @@ public interface ApiDoc {
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
-	 * @apiSuccess {float} orders.list.price_detail.tax_orice 订单税费
+	 * @apiSuccess {float} orders.list.price_detail.tax_price 订单税费
 	 * @apiSuccess {float} orders.list.price_detail.freight_price 订单运费
 	 * @apiSuccess {float} orders.list.price_detail.tip_price 订单小费
 	 * @apiSuccessExample Success-Response:
@@ -435,7 +435,7 @@ public interface ApiDoc {
 	 *                ],
 	 *                "price_detail": {
 	 *                    "dish_total_price": 26.3,
-	 *                    "tax_orice": 3,
+	 *                    "tax_price": 3,
 	 *                    "freight_price": 10,
 	 *                    "tip_price": 2
 	 *                }
@@ -644,7 +644,7 @@ public interface ApiDoc {
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
-	 * @apiSuccess {float} orders.list.price_detail.tax_orice 订单税费
+	 * @apiSuccess {float} orders.list.price_detail.tax_price 订单税费
 	 * @apiSuccess {float} orders.list.price_detail.freight_price 订单运费
 	 * @apiSuccess {float} orders.list.price_detail.tip_price 订单小费
 	 * @apiSuccessExample Success-Response:
@@ -685,7 +685,7 @@ public interface ApiDoc {
 	 *                ],
 	 *                "price_detail": {
 	 *                    "dish_total_price": 26.3,
-	 *                    "tax_orice": 3,
+	 *                    "tax_price": 3,
 	 *                    "freight_price": 10,
 	 *                    "tip_price": 2
 	 *                }
