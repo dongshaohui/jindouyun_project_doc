@@ -63,6 +63,7 @@ public interface ApiDoc {
 	 * @apiSuccess {int} orders.count 总订单数
 	 * @apiSuccess {Object[]} orders.list 订单数据对象数组
 	 * @apiSuccess {int} orders.list.orderid 订单id
+	 * @apiSuccess {int} orders.list.order_status 订单状态（1-新订单，2-已接订单，3-已完成订单，4-已取消的订单）
 	 * @apiSuccess {String} orders.list.ordertime 当单建立时间（YYYY-MM-DD hh:mm:ss）
 	 * @apiSuccess {Object} orders.list.userinfo 订单发起者信息对象
 	 * @apiSuccess {String} orders.list.userinfo.name 订单发起者姓名
@@ -77,6 +78,11 @@ public interface ApiDoc {
 	 * @apiSuccess {String} orders.list.creditcard_info.validate_month 信用卡有效期月份（MM）
 	 * @apiSuccess {Object[]} orders.list.dishinfos 订单菜品信息数组
 	 * @apiSuccess {String} orders.list.dishinfos.dish_name 订单菜品名称
+	 * @apiSuccess {int} orders.list.dishinfos.dish_number 订单菜品数量
+	 * @apiSuccess {int} orders.list.dishinfos.dish_type 订单菜品类型（0-单品菜，1-含配菜）
+	 * @apiSuccess {Object[]} orders.list.dishinfos.sub_dish_list 子菜品列表
+	 * @apiSuccess {String} orders.list.dishinfos.sub_dish_list.name 子菜品名称
+	 * @apiSuccess {float} orders.list.dishinfos.sub_dish_list.price 子菜品价格
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
@@ -159,6 +165,7 @@ public interface ApiDoc {
 	 * @apiSuccess {int} orders.count 总订单数
 	 * @apiSuccess {Object[]} orders.list 订单数据对象数组
 	 * @apiSuccess {int} orders.list.orderid 订单id
+	 * @apiSuccess {int} orders.list.order_status 订单状态（1-新订单，2-已接订单，3-已完成订单，4-已取消的订单）
 	 * @apiSuccess {String} orders.list.ordertime 当单建立时间（YYYY-MM-DD hh:mm:ss）
 	 * @apiSuccess {Object} orders.list.userinfo 订单发起者信息对象
 	 * @apiSuccess {String} orders.list.userinfo.name 订单发起者姓名
@@ -173,6 +180,11 @@ public interface ApiDoc {
 	 * @apiSuccess {String} orders.list.creditcard_info.validate_month 信用卡有效期月份（MM）
 	 * @apiSuccess {Object[]} orders.list.dishinfos 订单菜品信息数组
 	 * @apiSuccess {String} orders.list.dishinfos.dish_name 订单菜品名称
+	 * @apiSuccess {int} orders.list.dishinfos.dish_number 订单菜品数量
+	 * @apiSuccess {int} orders.list.dishinfos.dish_type 订单菜品类型（0-单品菜，1-含配菜）
+	 * @apiSuccess {Object[]} orders.list.dishinfos.sub_dish_list 子菜品列表
+	 * @apiSuccess {String} orders.list.dishinfos.sub_dish_list.name 子菜品名称
+	 * @apiSuccess {float} orders.list.dishinfos.sub_dish_list.price 子菜品价格
 	 * @apiSuccess {float} orders.list.dishinfos.dish_price 订单菜品价格
 	 * @apiSuccess {Object} orders.list.price_detail 订单价格明细
 	 * @apiSuccess {float} orders.list.price_detail.dish_total_price 订单菜品总价
