@@ -458,7 +458,7 @@ public interface ApiDoc {
 	 *  
 	 *  @apiError -1 token失效，需重新登录
 	 *  @apiError -2 订单id不存在
-	 *  @apiError -3 订单id不是新订单id
+	 *  @apiError -3 订单id不是已接订单id
 	 *  @apiErrorExample {json} Error-Response:
 	 *  HTTP/1.1 400 Not Found
 	 *  {
@@ -471,6 +471,42 @@ public interface ApiDoc {
 	 * @throws Exception
 	 */	
 
+
+	// 商户端 完成订单接口
+	/**
+	 * 
+	 * @api {post} /shop_serv/finish_order 完成订单
+	 * @apiName  完成订单接口  已接订单变成完成订单
+	 * @apiGroup Shop
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {String} orderid 订单id 
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 订单id不存在
+	 *  @apiError -3 订单id不是已接id
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-2,
+	 *   msg:'订单id不存在',
+	 *   }
+	 *   
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	
 
 	// 商户端 拒绝新订单接口
 	/**
