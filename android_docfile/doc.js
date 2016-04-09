@@ -43,7 +43,50 @@ public interface ApiDoc {
 	 */
 
 
-
+	/**
+	 * 
+	 * @api {get} /user_serv/site_search 地点搜索接口
+	 * @apiName 地点搜索接口111
+	 * @apiGroup Shop
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} address 输入的地址
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} address_list 返回地址信息数组
+	 * @apiSuccess {String} address_list.detail_address 返回的详细地址
+	 * @apiSuccess {float} address_list.longitude 返回地址的经度
+	 * @apiSuccess {float} address_list.latitude 返回地址的纬度
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * address_list:[
+	 *		{
+	 *			detail_address:"New york XXX Street",
+	 *			longitude:123.41,
+	 *			latitude:32.90,
+	 * 		},
+	 *		{
+	 *			detail_address:"New york XXX Building",
+	 *			longitude:123.11,
+	 *			latitude:32.30,
+	 * 		}	 
+	 *	  ]
+	 *  }
+	 *  
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
 
 	 // 商户端获取已完成订单接口
 	/**
