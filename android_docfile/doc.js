@@ -46,7 +46,7 @@ public interface ApiDoc {
 	/**
 	 * 
 	 * @api {get} /user_serv/site_search 地点搜索接口
-	 * @apiName 地点搜索接口111
+	 * @apiName 地点搜索接口1111
 	 * @apiGroup Shop
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述

@@ -649,6 +649,94 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/site_search",
+    "title": "地点搜索接口",
+    "name": "______1111",
+    "group": "Shop",
+    "version": "0.1.0",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "address",
+            "description": "<p>输入的地址</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "address_list",
+            "description": "<p>返回地址信息数组</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "address_list.detail_address",
+            "description": "<p>返回的详细地址</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "address_list.longitude",
+            "description": "<p>返回地址的经度</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "address_list.latitude",
+            "description": "<p>返回地址的纬度</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\naddress_list:[\n\t\t{\n\t\t\tdetail_address:\"New york XXX Street\",\n\t\t\tlongitude:123.41,\n\t\t\tlatitude:32.90,\n\t\t},\n\t\t{\n\t\t\tdetail_address:\"New york XXX Building\",\n\t\t\tlongitude:123.11,\n\t\t\tlatitude:32.30,\n\t\t}\t \n\t  ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "android_docfile/doc.js",
+    "groupTitle": "Shop"
+  },
+  {
+    "type": "get",
     "url": "/shop_serv/get_all_new_orders",
     "title": "获取所有新订单",
     "name": "_______",
