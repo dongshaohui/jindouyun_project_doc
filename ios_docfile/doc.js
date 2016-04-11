@@ -1045,7 +1045,8 @@ public interface ApiDoc {
 	 * @apiSuccess {object[]} order_list 订单数组
 	 * @apiSuccess {int} order_list.order_status 订单状态（0-订单进行中，1-订单已完成，2-订单已取消）
 	 * @apiSuccess {int} order_list.shop_id 订单从属的商户id
-	 * @apiSuccess {String} order_list.shop_name 订单从属的商户名称
+	 * @apiSuccess {String} order_list.shop_cn_name 订单从属的商户中文名称
+	 * @apiSuccess {String} order_list.shop_en_name 订单从属的商户英文名称
 	 * @apiSuccess {String} order_list.shop_img 订单从属的商户图片地址
 	 * @apiSuccess {float} order_list.total_price 订单金额
 	 * @apiSuccess {String} order_list.order_create_time 订单建立时间

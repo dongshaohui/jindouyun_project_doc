@@ -828,8 +828,15 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "order_list.shop_name",
-            "description": "<p>订单从属的商户名称</p>"
+            "field": "order_list.shop_cn_name",
+            "description": "<p>订单从属的商户中文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "order_list.shop_en_name",
+            "description": "<p>订单从属的商户英文名称</p>"
           },
           {
             "group": "Success 200",
