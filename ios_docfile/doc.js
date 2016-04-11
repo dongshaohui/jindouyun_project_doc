@@ -762,7 +762,8 @@ public interface ApiDoc {
 	 * @apiSuccess {int} dish_info_list.dish_id 菜品id
 	 * @apiSuccess {int} dish_info_list.dish_type 菜品类型（0-单品菜，1-含配菜）
 	 * @apiSuccess {String} dish_info_list.dish_img 菜品图片地址
-	 * @apiSuccess {String} dish_info_list.dish_name 菜品名称
+	 * @apiSuccess {String} dish_info_list.dish_cn_name 菜品中文名称
+	 * @apiSuccess {String} dish_info_list.dish_en_name 菜品英文名称
 	 * @apiSuccess {int} dish_info_list.current_month_order 菜品当月订单数
 	 * @apiSuccess {float} dish_info_list.dish_price 菜品价格（如果<code>dish_type</code>为<code>0</code>）
 	 * @apiSuccessExample Success-Response:
