@@ -1468,6 +1468,13 @@
           },
           {
             "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "total_shop_number",
+            "description": "<p>商店总数</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "object[]",
             "optional": false,
             "field": "shop_info_list",

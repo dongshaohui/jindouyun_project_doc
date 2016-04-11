@@ -584,6 +584,7 @@ public interface ApiDoc {
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} total_shop_number 商店总数
 	 * @apiSuccess {object[]} shop_info_list 返回店铺信息数组
 	 * @apiSuccess {int} shop_info_list.status 店铺状态（0-已关闭，1-营业中）
 	 * @apiSuccess {String} shop_info_list.shop_id 店铺id
