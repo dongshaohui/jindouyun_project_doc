@@ -817,7 +817,8 @@ public interface ApiDoc {
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {object[]} side_dish_info_list 返回菜品包含配菜数组
 	 * @apiSuccess {int} side_dish_info_list.side_dish_id 配菜id
-	 * @apiSuccess {String} side_dish_info_list.side_dish_name 配菜名称
+	 * @apiSuccess {String} side_dish_info_list.side_dish_cn_name 中文配菜名称
+	 * @apiSuccess {String} side_dish_info_list.side_dish_en_name 英文配菜名称
 	 * @apiSuccess {float} side_dish_info_list.side_dish_price 配菜价格
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK

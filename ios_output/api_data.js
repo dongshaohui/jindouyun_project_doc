@@ -300,8 +300,15 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "side_dish_info_list.side_dish_name",
-            "description": "<p>配菜名称</p>"
+            "field": "side_dish_info_list.side_dish_cn_name",
+            "description": "<p>中文配菜名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "side_dish_info_list.side_dish_en_name",
+            "description": "<p>英文配菜名称</p>"
           },
           {
             "group": "Success 200",
