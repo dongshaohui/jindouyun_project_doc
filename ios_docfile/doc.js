@@ -579,13 +579,19 @@ public interface ApiDoc {
 	 * @apiDescription 接口详细描述
 	 * 
 	 * 
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部
+	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {object[]} shop_info_list 返回店铺信息数组
 	 * @apiSuccess {int} shop_info_list.status 店铺状态（0-已关闭，1-营业中）
 	 * @apiSuccess {String} shop_info_list.shop_id 店铺id
 	 * @apiSuccess {String} shop_info_list.img 店铺图片
-	 * @apiSuccess {String} shop_info_list.name 店铺名称
+	 * @apiSuccess {String} shop_info_list.name_cn 店铺中文名称
+	 * @apiSuccess {String} shop_info_list.name_en 店铺英文名称
+	 * @apiSuccess {String} shop_info_list.shop_feature 店铺中文特色
+	 * @apiSuccess {String} shop_info_list.shop_feature_en 店铺英文特色
 	 * @apiSuccess {String} shop_info_list.address 店铺地址
 	 * @apiSuccess {String} shop_info_list.current_month_order 当月订单数
 	 * @apiSuccessExample Success-Response:

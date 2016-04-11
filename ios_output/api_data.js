@@ -1247,6 +1247,26 @@ define({ "api": [
     "group": "Shop_Module",
     "version": "0.1.0",
     "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageno",
+            "description": "<p>分页码，不填默认为第1页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pagelength",
+            "description": "<p>页长，不填默认为全部</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Success 200": [
@@ -1296,8 +1316,29 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "shop_info_list.name",
-            "description": "<p>店铺名称</p>"
+            "field": "shop_info_list.name_cn",
+            "description": "<p>店铺中文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.name_en",
+            "description": "<p>店铺英文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.shop_feature",
+            "description": "<p>店铺中文特色</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_info_list.shop_feature_en",
+            "description": "<p>店铺英文特色</p>"
           },
           {
             "group": "Success 200",
