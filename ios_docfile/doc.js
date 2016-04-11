@@ -686,13 +686,16 @@ public interface ApiDoc {
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {int} status 店铺状态（0-已关闭，1-营业中）
 	 * @apiSuccess {String} shop_img 商铺图片
-	 * @apiSuccess {String} shop_name 商铺名称
-	 * @apiSuccess {String} shop_feature 商铺特色
+	 * @apiSuccess {String} name_cn 商铺中文名称
+	 * @apiSuccess {String} name_en 商铺英文名称
+	 * @apiSuccess {String} shop_feature 商铺中文特色
+	 * @apiSuccess {String} shop_feature_en 商铺英文特色
 	 * @apiSuccess {object[]} dish_info_list 返回店铺菜品信息数组
 	 * @apiSuccess {int} dish_info_list.dish_id 菜品id
 	 * @apiSuccess {int} dish_info_list.dish_type 菜品类型（0-单品菜，1-含配菜）
 	 * @apiSuccess {String} dish_info_list.dish_img 菜品图片地址
-	 * @apiSuccess {String} dish_info_list.dish_name 菜品名称
+	 * @apiSuccess {String} dish_info_list.dish_name_cn 中文菜品名称
+	 * @apiSuccess {String} dish_info_list.dish_name_en 英文菜品名称
 	 * @apiSuccess {int} dish_info_list.current_month_order 菜品当月订单数
 	 * @apiSuccess {float} dish_info_list.dish_price 菜品价格（如果<code>dish_type</code>为<code>0</code>）
 	 * @apiSuccess {object} shop_detail_info 店铺详情信息对象

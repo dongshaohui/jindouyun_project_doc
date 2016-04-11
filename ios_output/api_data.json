@@ -1141,15 +1141,29 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "shop_name",
-            "description": "<p>商铺名称</p>"
+            "field": "name_cn",
+            "description": "<p>商铺中文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "name_en",
+            "description": "<p>商铺英文名称</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "shop_feature",
-            "description": "<p>商铺特色</p>"
+            "description": "<p>商铺中文特色</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_feature_en",
+            "description": "<p>商铺英文特色</p>"
           },
           {
             "group": "Success 200",
@@ -1183,8 +1197,15 @@
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "dish_info_list.dish_name",
-            "description": "<p>菜品名称</p>"
+            "field": "dish_info_list.dish_name_cn",
+            "description": "<p>中文菜品名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_info_list.dish_name_en",
+            "description": "<p>英文菜品名称</p>"
           },
           {
             "group": "Success 200",
