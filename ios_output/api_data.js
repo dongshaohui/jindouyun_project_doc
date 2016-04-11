@@ -127,6 +127,125 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/get_dish_detail",
+    "title": "获取菜品详情信息",
+    "name": "________2122222221",
+    "group": "Dish_Module",
+    "version": "0.1.0",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "dish_id",
+            "description": "<p>菜品id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_id",
+            "description": "<p>菜品id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_type",
+            "description": "<p>菜品类型</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_name_cn",
+            "description": "<p>中文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_name_en",
+            "description": "<p>英文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_img",
+            "description": "<p>图片地址</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_price",
+            "description": "<p>菜品价格</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "current_month_order",
+            "description": "<p>本月订单量</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\ndish_id: 1,\ndish_type:0,\ndish_name_cn:\"XXXX\",\ndish_name_en:\"xxx\",\ndish_img:\"XXX.jpg\",\ndish_price:11.2,\ncurrent_month_order:3\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>dish_id无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'dish_id无效',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Dish_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/get_all_side_dishes",
     "title": "获取某菜品所有配菜接口",
     "name": "___________1",

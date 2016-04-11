@@ -850,7 +850,51 @@ public interface ApiDoc {
 	 * @throws Exception
 	 */	 
 
-
+	/**
+	 * 
+	 * @api {get} /user_serv/get_dish_detail 获取菜品详情信息
+	 * @apiName 获取菜品详情信息2122222221
+	 * @apiGroup Dish_Module
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} dish_id 菜品id 
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} dish_id 菜品id
+	 * @apiSuccess {int} dish_type 菜品类型
+	 * @apiSuccess {String} dish_name_cn 中文名称
+	 * @apiSuccess {String} dish_name_en 英文名称
+	 * @apiSuccess {String} dish_img 图片地址
+	 * @apiSuccess {String} dish_price 菜品价格
+	 * @apiSuccess {String} current_month_order 本月订单量
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * dish_id: 1,
+	 * dish_type:0,
+	 * dish_name_cn:"XXXX",
+	 * dish_name_en:"xxx",
+	 * dish_img:"XXX.jpg",
+	 * dish_price:11.2,
+	 * current_month_order:3
+	 * }
+	 *  @apiError -1 dish_id无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'dish_id无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
 
 
 	/**
