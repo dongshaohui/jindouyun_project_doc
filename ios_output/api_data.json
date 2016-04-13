@@ -357,7 +357,7 @@
     "groupTitle": "Dish_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/upload_order",
     "title": "用户提交订单",
     "name": "______1",
@@ -1097,6 +1097,65 @@
   },
   {
     "type": "get",
+    "url": "/user_serv/get_banner_list",
+    "title": "获取轮播图像",
+    "name": "______111",
+    "group": "Other_Module",
+    "version": "0.1.0",
+    "description": "<p>接口详细描述</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "banner_list",
+            "description": "<p>轮播图集合</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "banner_list.img",
+            "description": "<p>轮播图地址</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "banner_list.priority",
+            "description": "<p>轮播图优先级（优先级高的先显示）</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nbanner_list:[\n\t{\n\t\timg:'a.jpg',\n\t\tpriority: 3 \n},\n],\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Other_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/search_shop_infos",
     "title": "搜索所有的店铺",
     "name": "_______111",
@@ -1566,7 +1625,7 @@
     "groupTitle": "Shop_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/add_delivery_addres",
     "title": "新增收货地址",
     "name": "______1",
@@ -1885,7 +1944,7 @@
     "groupTitle": "User_Address_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/select_delivery_address",
     "title": "用户选取收货地址",
     "name": "________111",
@@ -2073,7 +2132,7 @@
     "groupTitle": "User_Address_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/login",
     "title": "用户登录接口",
     "name": "______",
@@ -2163,7 +2222,7 @@
     "groupTitle": "User_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/register",
     "title": "用户注册",
     "name": "______1",
@@ -2266,7 +2325,7 @@
     "groupTitle": "User_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/register",
     "title": "用户注册",
     "name": "______1",
@@ -2453,7 +2512,7 @@
     "groupTitle": "User_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/send_verification_code",
     "title": "发送手机验证码接口",
     "name": "_________",
@@ -2542,7 +2601,7 @@
     "groupTitle": "User_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/add_credit_card",
     "title": "新增信用卡接口",
     "name": "_______1",
@@ -2671,7 +2730,7 @@
     "groupTitle": "User_Pay_Type_Module"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/user_serv/select_paytype",
     "title": "用户选取支付方式",
     "name": "________11",
