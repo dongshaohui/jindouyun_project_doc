@@ -815,10 +815,49 @@ public interface ApiDoc {
 	 */
 
 
+
 	/**
 	 * 
-	 * @api {post} /shop_serv/upload_addr 上传商户地址
-	 * @apiName 上传商户地址1
+	 * @api {get} /shop_serv/upload_addr 上传商户地址
+	 * @apiName 上传商户地址11111
+	 * @apiGroup Shop
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {String} searched_addr 搜索选择的地址
+	 * @apiParam {String} detailed_addr 具体地址
+	 * @apiParam {String} longitude 具体地址
+	 * @apiParam {String} latitude 具体地址
+	 * @apiParam {String} postcode 邮编
+	 *	 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:1,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *   
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
+	 * @api {get} /shop_serv/get_addr 获取商户地址
+	 * @apiName 获取商户地址1
 	 * @apiGroup Shop
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
