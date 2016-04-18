@@ -467,7 +467,7 @@ define({ "api": [
     "groupTitle": "Shop"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/shop_serv/get_addr",
     "title": "获取商户地址",
     "name": "______1",
@@ -736,7 +736,7 @@ define({ "api": [
     "groupTitle": "Shop"
   },
   {
-    "type": "post",
+    "type": "get",
     "url": "/shop_serv/upload_addr",
     "title": "上传商户地址",
     "name": "______11111",
@@ -857,6 +857,20 @@ define({ "api": [
             "optional": false,
             "field": "token",
             "description": "<p>用户token</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageno",
+            "description": "<p>分页码，不填默认为第1页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pagelength",
+            "description": "<p>页长，不填默认为全部</p>"
           }
         ]
       }
@@ -1242,6 +1256,20 @@ define({ "api": [
             "optional": false,
             "field": "token",
             "description": "<p>用户token</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageno",
+            "description": "<p>分页码，不填默认为第1页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pagelength",
+            "description": "<p>页长，不填默认为全部</p>"
           }
         ]
       }
@@ -1816,6 +1844,20 @@ define({ "api": [
             "optional": false,
             "field": "token",
             "description": "<p>用户token</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageno",
+            "description": "<p>分页码，不填默认为第1页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pagelength",
+            "description": "<p>页长，不填默认为全部</p>"
           }
         ]
       }

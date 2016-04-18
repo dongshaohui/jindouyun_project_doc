@@ -98,6 +98,8 @@ public interface ApiDoc {
 	 * @apiDescription 接口详细描述
 	 * 
 	 * @apiParam {String} token 用户token
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部	 
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
@@ -303,6 +305,8 @@ public interface ApiDoc {
 	 * @apiDescription 接口详细描述
 	 * 
 	 * @apiParam {String} token 用户token
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部	 
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
@@ -407,6 +411,8 @@ public interface ApiDoc {
 	 * @apiDescription 接口详细描述
 	 * 
 	 * @apiParam {String} token 用户token
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部	 
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
