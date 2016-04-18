@@ -274,6 +274,40 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/delete_paytype 删除支付方式
+	 * @apiName 删除支付方式2121
+	 * @apiGroup User_Pay_Type_Module
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {String} paytype_id 支付方式id
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 paytype_id无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+	/**
+	 * 
 	 * @api {get} /user_serv/get_paytype 获取用户默认支付方式
 	 * @apiName 获取用户默认支付方式11
 	 * @apiGroup User_Pay_Type_Module
