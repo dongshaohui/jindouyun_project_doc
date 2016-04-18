@@ -534,6 +534,42 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/edit_delivery_address 用户删除收货地址
+	 * @apiName 用户删除收货地址111
+	 * @apiGroup User_Address_Module
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {int} delivery_address_id 收货地址id
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 delivery_address_id无效
+	 *
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
 	 * @api {get} /user_serv/get_user_delivery_address 获取用户默认送货地址
 	 * @apiName 获取用户默认邮寄地址111
 	 * @apiGroup User_Address_Module

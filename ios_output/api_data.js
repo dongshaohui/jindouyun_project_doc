@@ -1945,6 +1945,89 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/edit_delivery_address",
+    "title": "用户删除收货地址",
+    "name": "________111",
+    "group": "User_Address_Module",
+    "version": "0.1.0",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配的token</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "delivery_address_id",
+            "description": "<p>收货地址id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>token失效，需重新登录</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-2",
+            "description": "<p>delivery_address_id无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'token失效，需重新登录',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "User_Address_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/select_delivery_address",
     "title": "用户选取收货地址",
     "name": "________111",
