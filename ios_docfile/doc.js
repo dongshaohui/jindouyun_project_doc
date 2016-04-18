@@ -500,7 +500,7 @@ public interface ApiDoc {
 	/**
 	 * 
 	 * @api {get} /user_serv/select_delivery_address 用户选取收货地址
-	 * @apiName 用户选取收货地址111
+	 * @apiName 用户选取收货地址11122
 	 * @apiGroup User_Address_Module
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
@@ -535,7 +535,7 @@ public interface ApiDoc {
 	/**
 	 * 
 	 * @api {get} /user_serv/edit_delivery_address 用户删除收货地址
-	 * @apiName 用户删除收货地址111
+	 * @apiName 用户删除收货地址1221
 	 * @apiGroup User_Address_Module
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
