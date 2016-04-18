@@ -534,7 +534,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/edit_delivery_address 用户删除收货地址
+	 * @api {get} /user_serv/delete_delivery_address 用户删除收货地址
 	 * @apiName 用户删除收货地址1221
 	 * @apiGroup User_Address_Module
 	 * @apiVersion 0.1.0

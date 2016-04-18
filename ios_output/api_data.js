@@ -2028,7 +2028,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/edit_delivery_address",
+    "url": "/user_serv/delete_delivery_address",
     "title": "用户删除收货地址",
     "name": "________1221",
     "group": "User_Address_Module",
