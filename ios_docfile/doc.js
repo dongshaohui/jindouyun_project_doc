@@ -317,7 +317,8 @@ public interface ApiDoc {
 	 * @apiParam {String} token 系统分配的token
 	 * 
 	 * @apiSuccess {String} code 结果码
-	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {String} msg 消息说明 
+	 * @apiSuccess {int} paytype_id 支付方式id
 	 * @apiSuccess {int} pay_type 支付方式（0-信用卡，1-货到付款）
 	 * @apiSuccess {String} credit_card 信用卡号（当pay_type为0）
 	 * @apiSuccess {String} pin_code pin码（当pay_type为0）

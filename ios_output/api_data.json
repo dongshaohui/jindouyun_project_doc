@@ -3132,6 +3132,13 @@
             "group": "Success 200",
             "type": "int",
             "optional": false,
+            "field": "paytype_id",
+            "description": "<p>支付方式id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
             "field": "pay_type",
             "description": "<p>支付方式（0-信用卡，1-货到付款）</p>"
           },
