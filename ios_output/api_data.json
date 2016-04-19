@@ -1136,6 +1136,13 @@
           },
           {
             "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "banner_list.link",
+            "description": "<p>轮播图超链接</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "int",
             "optional": false,
             "field": "banner_list.priority",
@@ -1146,7 +1153,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nbanner_list:[\n\t{\n\t\timg:'a.jpg',\n\t\tpriority: 3 \n},\n],\n }",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nbanner_list:[\n\t{\n\t\timg:'a.jpg',\n\t\tlink :'http://www.baidu.com/',\n\t\tpriority: 3 \n},\n],\n }",
           "type": "json"
         }
       ]

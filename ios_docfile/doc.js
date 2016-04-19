@@ -1243,6 +1243,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {Object[]} banner_list 轮播图集合
 	 * @apiSuccess {String} banner_list.img 轮播图地址
+	 * @apiSuccess {String} banner_list.link 轮播图超链接
 	 * @apiSuccess {int} banner_list.priority 轮播图优先级（优先级高的先显示）
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
@@ -1252,6 +1253,7 @@ public interface ApiDoc {
 	 * banner_list:[
 	 *	{
 	 *		img:'a.jpg',
+	 *		link :'http://www.baidu.com/',
 	 *		priority: 3 
 	 * },
 	 *],
