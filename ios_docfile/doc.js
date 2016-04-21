@@ -994,9 +994,7 @@ public interface ApiDoc {
 	 * @apiParam {object[]} dish_order_list.side_dish_list 配菜列表（如果dish_type为1的话）
 	 * @apiParam {int} dish_order_list.side_dish_list.order_number 配菜点了多少份
 	 * @apiParam {int} dish_order_list.side_dish_list.side_dish_id 配菜id
-	 * @apiParam {float} freight 运费
 	 * @apiParam {float} distance 商户距离用户的距离（调用接口，如果用户或商户没有传递地址信息，返回值为0，单位KM）
-	 * @apiParam {float} tax 税费
 
 	 * 
 	 * @apiSuccess {String} code 结果码

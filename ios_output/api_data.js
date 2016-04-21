@@ -476,22 +476,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "float",
             "optional": false,
-            "field": "freight",
-            "description": "<p>运费</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "float",
-            "optional": false,
             "field": "distance",
             "description": "<p>商户距离用户的距离（调用接口，如果用户或商户没有传递地址信息，返回值为0，单位KM）</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "float",
-            "optional": false,
-            "field": "tax",
-            "description": "<p>税费</p>"
           }
         ]
       }
