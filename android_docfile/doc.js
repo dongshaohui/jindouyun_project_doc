@@ -16,6 +16,7 @@ public interface ApiDoc {
 	 * 
 	 * @apiParam {String} username 商户手机号码 
 	 * @apiParam {String} password 商户登录密码（明文） 
+	 * @apiParam {String} registration_id 极光推送设备标记
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明

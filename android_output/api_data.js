@@ -581,6 +581,13 @@ define({ "api": [
             "optional": false,
             "field": "password",
             "description": "<p>商户登录密码（明文）</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "registration_id",
+            "description": "<p>极光推送设备标记</p>"
           }
         ]
       }
