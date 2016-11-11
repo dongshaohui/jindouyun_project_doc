@@ -643,7 +643,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/get_all_shop_infos 获取所有正在营业中店铺的信息
+	 * @api {get} /user_serv/get_all_shop_infos 获取所有店铺的信息
 	 * @apiName 获取所有正在营业中店铺的信息11
 	 * @apiGroup Shop_Module
 	 * @apiVersion 0.1.0
@@ -691,6 +691,60 @@ public interface ApiDoc {
 	 * @return
 	 * @throws Exception
 	 */	 	
+
+
+	/**
+	 * 
+	 * @api {get} /user_serv/get_all_shop_infos 获取所有店铺的信息
+	 * @apiName 获取所有正在营业中店铺的信息11
+	 * @apiGroup Shop_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部
+	 * @apiParam {int} district_id  分区ID
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} total_shop_number 商店总数
+	 * @apiSuccess {object[]} shop_info_list 返回店铺信息数组
+	 * @apiSuccess {int} shop_info_list.status 店铺状态（0-已关闭，1-营业中）
+	 * @apiSuccess {String} shop_info_list.shop_id 店铺id
+	 * @apiSuccess {String} shop_info_list.img 店铺图片
+	 * @apiSuccess {String} shop_info_list.name_cn 店铺中文名称
+	 * @apiSuccess {String} shop_info_list.name_en 店铺英文名称
+	 * @apiSuccess {String} shop_info_list.shop_feature 店铺中文特色
+	 * @apiSuccess {String} shop_info_list.shop_feature_en 店铺英文特色
+	 * @apiSuccess {String} shop_info_list.address 店铺地址
+	 * @apiSuccess {String} shop_info_list.current_month_order 当月订单数
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * shop_info_list:[
+	 *		{
+	 *			shop_id:12,	
+	 *			img:"http://XXX.img",
+	 *			name:"XX牛肉面",
+	 *			address:"XXX Street",
+	 *			current_month_order:"112"
+	 * 		}
+	 *    ]
+	 *  }
+	 *  
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 	
+
 
 
 	/**
@@ -818,6 +872,39 @@ public interface ApiDoc {
 	 * @return
 	 * @throws Exception
 	 */	 
+
+	/**
+	 * 
+	 * @api {get} /user_serv/search_dishes 获取所有分区接口
+	 * @apiName 获取所有分区接口
+	 * @apiGroup District_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiSuccess {object[]} district_list 分区信息列表
+	 * @apiSuccess {int} district_list.district_id 分区ID
+	 * @apiSuccess {float} district_list.district_name 分区名称
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * district_list:[
+	 *		{
+	 *			district_id:1,	
+	 *			district_name:'费城',
+	 * 		},
+	 *		{
+	 *			district_id:3,	
+	 *			district_name:'休斯顿',
+	 * 		}
+	 *     ]
+	 *  }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
+
 
 	/**
 	 * 
