@@ -967,6 +967,59 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/dish/get_all_dish_property 获取菜品的属性列表（只对含配菜有效）
+	 * @apiName 获取菜品的属性列表（只对含配菜有效）1
+	 * @apiGroup Dish_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} dish_id 菜品id 
+	 *
+	 * @apiSuccess {object[]} dish_property_info 菜品的属性列表
+	 * @apiSuccess {int} dish_property_info.dish_property_group_id 菜品属性组别ID
+	 * @apiSuccess {String} dish_property_info.dish_property_group_desc 菜品属性组别描述
+	 * @apiSuccess {object[]} dish_property_info.dish_property_list 该属性组别下属性列表
+	 * @apiSuccess {int} dish_property_info.dish_property_list.dish_property_id 菜品属性ID
+	 * @apiSuccess {String} dish_property_info.dish_property_list.dish_property_desc 菜品属性描述
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * dish_property_info:[
+	 *		{
+	 *			dish_property_group_id:1,	
+	 *			dish_property_group_desc:'请选择菜品辣度',
+	 *			dish_property_list:[
+	 *				{
+	 *					dish_property_id:13,
+	 *					dish_property_desc:'微辣'
+	 *				},
+	 *				{
+	 *					dish_property_id:14,
+	 *					dish_property_desc:'中辣'
+	 *				},
+	 *			]
+	 * 		}
+	 *     ]
+	 *  }
+	 *  @apiError -1 shopid无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shopid无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
+
+
+
+
+	/**
+	 * 
 	 * @api {get} /user_serv/get_all_side_dishes 获取某菜品所有配菜接口
 	 * @apiName 获取某菜品所有配菜接口1
 	 * @apiGroup Dish_Module

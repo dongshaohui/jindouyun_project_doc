@@ -358,6 +358,104 @@
   },
   {
     "type": "get",
+    "url": "/user_serv/dish/get_all_dish_property",
+    "title": "获取菜品的属性列表（只对含配菜有效）",
+    "name": "__________________1",
+    "group": "Dish_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "dish_id",
+            "description": "<p>菜品id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "dish_property_info",
+            "description": "<p>菜品的属性列表</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_property_info.dish_property_group_id",
+            "description": "<p>菜品属性组别ID</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_property_info.dish_property_group_desc",
+            "description": "<p>菜品属性组别描述</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "dish_property_info.dish_property_list",
+            "description": "<p>该属性组别下属性列表</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_property_info.dish_property_list.dish_property_id",
+            "description": "<p>菜品属性ID</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_property_info.dish_property_list.dish_property_desc",
+            "description": "<p>菜品属性描述</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ndish_property_info:[\n\t\t{\n\t\t\tdish_property_group_id:1,\t\n\t\t\tdish_property_group_desc:'请选择菜品辣度',\n\t\t\tdish_property_list:[\n\t\t\t\t{\n\t\t\t\t\tdish_property_id:13,\n\t\t\t\t\tdish_property_desc:'微辣'\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\tdish_property_id:14,\n\t\t\t\t\tdish_property_desc:'中辣'\n\t\t\t\t},\n\t\t\t]\n\t\t}\n    ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>shopid无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'shopid无效',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Dish_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/search_dishes",
     "title": "获取所有分区接口",
     "name": "________",
