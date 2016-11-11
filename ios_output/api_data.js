@@ -1294,6 +1294,20 @@ define({ "api": [
             "optional": false,
             "field": "shop_id",
             "description": "<p>店铺id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageno",
+            "description": "<p>分页码，不填默认为第1页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pagelength",
+            "description": "<p>页长，不填默认为全部</p>"
           }
         ]
       }
@@ -1356,6 +1370,13 @@ define({ "api": [
             "optional": false,
             "field": "shop_feature_en",
             "description": "<p>商铺英文特色</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "min_distribution_cost",
+            "description": "<p>最低配送费用</p>"
           },
           {
             "group": "Success 200",

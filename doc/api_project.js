@@ -1,4 +1,4 @@
-{
+define({
   "name": "",
   "version": "0.0.0",
   "description": "",
@@ -6,8 +6,8 @@
   "apidoc": "0.2.0",
   "generator": {
     "name": "apidoc",
-    "time": "2016-05-30T12:33:06.150Z",
+    "time": "2016-05-30T12:32:33.858Z",
     "url": "http://apidocjs.com",
     "version": "0.15.1"
   }
-}
+});

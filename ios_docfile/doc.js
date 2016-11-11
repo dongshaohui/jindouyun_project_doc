@@ -753,6 +753,8 @@ public interface ApiDoc {
 	 * 
 	 * 
 	 * @apiParam {int} shop_id 店铺id
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部	 
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
@@ -762,6 +764,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} name_en 商铺英文名称
 	 * @apiSuccess {String} shop_feature 商铺中文特色
 	 * @apiSuccess {String} shop_feature_en 商铺英文特色
+	 * @apiSuccess {float} min_distribution_cost 最低配送费用
 	 * @apiSuccess {object[]} dish_info_list 返回店铺菜品信息数组
 	 * @apiSuccess {int} dish_info_list.dish_id 菜品id
 	 * @apiSuccess {int} dish_info_list.dish_type 菜品类型（0-单品菜，1-含配菜）
