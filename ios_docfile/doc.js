@@ -875,7 +875,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/search_dishes 获取所有分区接口
+	 * @api {get} /user_serv/get_all_district_info 获取所有分区接口
 	 * @apiName 获取所有分区接口
 	 * @apiGroup District_Module
 	 * @apiVersion 0.1.1
@@ -1291,6 +1291,61 @@ public interface ApiDoc {
 	 * @return
 	 * @throws Exception
 	 */	
+
+	/**
+	 * 
+	 * @api {get} /user_serv/get_all_orders 获取用户所有的订单信息
+	 * @apiName 获取用户所有的订单信息1
+	 * @apiGroup Order_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} order_list 订单数组
+	 * @apiSuccess {int} order_list.order_status 订单状态（0-订单进行中，1-订单已完成，2-订单已取消）
+	 * @apiSuccess {int} order_list.shop_id 订单从属的商户id
+	 * @apiSuccess {String} order_list.shop_cn_name 订单从属的商户中文名称
+	 * @apiSuccess {String} order_list.shop_en_name 订单从属的商户英文名称
+	 * @apiSuccess {String} order_list.shop_img 订单从属的商户图片地址
+	 * @apiSuccess {float} order_list.total_price 订单金额
+	 * @apiSuccess {float} order_list.discount_rate 折扣率
+	 * @apiSuccess {float} order_list.dish_price 菜品总价
+	 * @apiSuccess {float} order_list.payable_price 应付价格
+	 * @apiSuccess {String} order_list.order_create_time 订单建立时间
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * order_list:[
+	 *   {
+	 * 		order_status:0,
+	 *		shop_id:1,
+	 *		shop_name:"兰州拉面",
+	 *		shop_img:"XXX.jpg",
+	 *		total_price:23.1,
+	 *		order_create_time:"2016-12-11 19:00:00"
+	 *   }
+	 * ]
+	 *  }
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shop_id无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	
+
+
 
 	/**
 	 * 

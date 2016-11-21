@@ -1,13 +1,1 @@
-{
-  "name": "",
-  "version": "0.0.0",
-  "description": "",
-  "sampleUrl": false,
-  "apidoc": "0.2.0",
-  "generator": {
-    "name": "apidoc",
-    "time": "2016-11-11T06:50:50.119Z",
-    "url": "http://apidocjs.com",
-    "version": "0.15.1"
-  }
-}
+{  "name": "",  "version": "0.0.0",  "description": "",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2016-11-21T09:51:04.010Z",    "url": "http://apidocjs.com",    "version": "0.16.1"  }}
