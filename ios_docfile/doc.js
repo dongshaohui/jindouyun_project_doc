@@ -1168,6 +1168,64 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/upload_order_v2 用户提交订单
+	 * @apiName 用户提交订单1
+	 * @apiGroup Order_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {int} shop_id 店家id
+	 * @apiParam {int} delivery_address_id 收货地址id
+	 * @apiParam {int} paytype_id 支付方式id
+	 * @apiParam {int} consume_type 消费方式（0-配送，1-到店消费） 
+	 * @apiParam {int} tip_type 小费方式（0-小费比率，1-现金小费）
+	 * @apiParam {float} tip_ratio 小费百分比（如果tip_type为0）
+	 * @apiParam {text} remark 备注
+	 * @apiParam {object[]} dish_order_list 点餐列表
+	 * @apiParam {int} dish_order_list.dish_id 菜品id
+	 * @apiParam {int} dish_order_list.dish_type 菜品类型（0-单品菜，1-含配菜）
+	 * @apiParam {int} dish_order_list.order_number 菜品点了多少份
+	 * @apiParam {object[]} dish_order_list.side_dish_list 配菜列表（如果dish_type为1的话）
+	 * @apiParam {int} dish_order_list.side_dish_list.side_dish_id 配菜ID
+	 * @apiParam {int} dish_order_list.side_dish_list.order_number 配菜点了多少份
+	 * @apiParam {object[]} dish_order_list.dish_property_list 菜品属性列表（如果dish_type为1的话）
+	 * @apiParam {int} dish_order_list.dish_property_list.dish_property_id 菜品属性ID
+	 * @apiParam {float} distance 商户距离用户的距离（调用接口，如果用户或商户没有传递地址信息，返回值为0，单位KM）
+
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 shop_id无效
+	 *  @apiError -3 delivery_address_id无效
+	 *  @apiError -4 paytype_id无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+
+
+
+
+	/**
+	 * 
 	 * @api {get} /user_serv/calculate_distance 计算商户到收货地址之间的距离
 	 * @apiName 计算商户到收货地址之间的距离1
 	 * @apiGroup Order_Module
