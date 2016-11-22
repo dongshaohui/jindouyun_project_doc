@@ -1426,6 +1426,7 @@ public interface ApiDoc {
 	 * @throws Exception
 	 */	
 
+
 	/**
 	 * 
 	 * @api {get} /user_serv/get_banner_list 获取轮播图像
@@ -1434,6 +1435,43 @@ public interface ApiDoc {
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
 	 * 
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {Object[]} banner_list 轮播图集合
+	 * @apiSuccess {String} banner_list.img 轮播图地址
+	 * @apiSuccess {String} banner_list.link 轮播图超链接
+	 * @apiSuccess {int} banner_list.priority 轮播图优先级（优先级高的先显示）
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * banner_list:[
+	 *	{
+	 *		img:'a.jpg',
+	 *		link :'http://www.baidu.com/',
+	 *		priority: 3 
+	 * },
+	 *],
+	 *  }
+	 *  
+	 *   
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
+	 * @api {get} /user_serv/get_banner_list 获取轮播图像
+	 * @apiName 获取轮播图像111
+	 * @apiGroup Other_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {int} district_id 区域id
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
