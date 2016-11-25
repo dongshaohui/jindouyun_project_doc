@@ -1169,11 +1169,11 @@ public interface ApiDoc {
 	 * @apiDescription 接口详细描述
 	 * 
 	 * 
-	 * @apiParam {int} dish_category_id 店铺id 
+	 * @apiParam {int} dish_category_id 菜品大类id 
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
-	 * @apiSuccess {object[]} dish_info 返回店铺菜品信息数组
+	 * @apiSuccess {object[]} dish_info 返回菜品大类下菜品信息数组
 	 * @apiSuccess {int} dish_info.dish_id 菜品id
 	 * @apiSuccess {int} dish_info.dish_type 菜品类型（0-单品菜，1-含配菜）
 	 * @apiSuccess {String} dish_info.dish_img 菜品图片地址

@@ -463,7 +463,7 @@ define({ "api": [
             "type": "int",
             "optional": false,
             "field": "dish_category_id",
-            "description": "<p>店铺id</p>"
+            "description": "<p>菜品大类id</p>"
           }
         ]
       }
@@ -490,7 +490,7 @@ define({ "api": [
             "type": "object[]",
             "optional": false,
             "field": "dish_info",
-            "description": "<p>返回店铺菜品信息数组</p>"
+            "description": "<p>返回菜品大类下菜品信息数组</p>"
           },
           {
             "group": "Success 200",
