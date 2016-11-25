@@ -1116,6 +1116,105 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/dish/get_all_dish_category 获取某家店所有菜品大类接口
+	 * @apiName 获取某家店所有菜品大类接口1
+	 * @apiGroup Dish_Module
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} shop_id 店铺id 
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} dish_category_info 某家店所有菜品大类数组
+	 * @apiSuccess {int} dish_category_info.dish_category_id 菜品大类id
+	 * @apiSuccess {int} dish_category_info.dish_category_name 菜品大类名称
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * dish_category_info:[
+	 *		{
+	 *			dish_category_id:1,	
+	 *			dish_category_name:"面",
+	 * 		},
+	 *		{
+	 *			dish_category_id:2,	
+	 *			dish_category_name:"主食",
+	 * 		}
+	 *     ]
+	 *  }
+	 *  @apiError -1 shopid无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shopid无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
+
+
+	/**
+	 * 
+	 * @api {get} /user_serv/dish/get_category_all_dishes 获取某菜品大类下所有菜品信息接口
+	 * @apiName 获取某菜品大类下所有菜品信息接口1
+	 * @apiGroup Dish_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} dish_category_id 店铺id 
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} dish_info 返回店铺菜品信息数组
+	 * @apiSuccess {int} dish_info.dish_id 菜品id
+	 * @apiSuccess {int} dish_info.dish_type 菜品类型（0-单品菜，1-含配菜）
+	 * @apiSuccess {String} dish_info.dish_img 菜品图片地址
+	 * @apiSuccess {String} dish_info.dish_name_cn 中文菜品名称
+	 * @apiSuccess {String} dish_info.dish_name_en 英文菜品名称
+	 * @apiSuccess {int} dish_info.current_month_order 菜品当月订单数
+	 * @apiSuccess {float} dish_info.dish_order_checkout_thres 菜品成菜价格下限（只对含配菜有效）
+	 * @apiSuccess {float} dish_info.dish_price 菜品价格（如果<code>dish_type</code>为<code>0</code>）
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * dish_info:[
+	 *		{
+	 *			dish_id:12,	
+	 *			dish_type:0,
+	 *			dish_img:"http://XXX.jpg",
+	 *			dish_name:"XX牛肉面",
+	 *			current_month_order:11,
+	 *			dish_price:13.2
+	 *			dish_order_checkout_thres:12.5
+	 * 		}
+	 *     ]
+	 *  }
+	 *  @apiError -1 dish_category_id无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'dish_category_id无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
+
+
+	/**
+	 * 
 	 * @api {get} /user_serv/upload_order 用户提交订单
 	 * @apiName 用户提交订单1
 	 * @apiGroup Order_Module
