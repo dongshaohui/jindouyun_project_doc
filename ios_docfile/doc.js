@@ -875,6 +875,57 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/get_shop_detail_info_v2 获取店铺信息详情
+	 * @apiName 获取店铺信息详情1
+	 * @apiGroup Shop_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} shop_id 店铺id
+	 * @apiParam {int} pageno 分页码，不填默认为第1页
+	 * @apiParam {int} pagelength  页长，不填默认为全部	 
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} status 店铺状态（0-已关闭，1-营业中）
+	 * @apiSuccess {String} shop_img 商铺图片
+	 * @apiSuccess {String} name_cn 商铺中文名称
+	 * @apiSuccess {String} name_en 商铺英文名称
+	 * @apiSuccess {String} shop_feature 商铺中文特色
+	 * @apiSuccess {String} shop_feature_en 商铺英文特色
+	 * @apiSuccess {float} min_distribution_cost 最低配送费用
+	 * @apiSuccess {object} shop_detail_info 店铺详情信息对象
+	 * @apiSuccess {String} shop_detail_info.delivery_time 可配送时间
+	 * @apiSuccess {String} shop_detail_info.phone 商家电话
+	 * @apiSuccess {String} shop_detail_info.address 商家地址
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *    shop_detail_info:
+	 * 	  {
+	 *		  delivery_time:'9:00-22:00',
+	 *		  phone:'55642220',
+	 *		  address:'XXX Street'
+	 *	  }
+	 *  }
+	 *  @apiError -1 shopid无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shopid无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
+
+	/**
+	 * 
 	 * @api {get} /user_serv/get_all_district_info 获取所有分区接口
 	 * @apiName 获取所有分区接口
 	 * @apiGroup District_Module

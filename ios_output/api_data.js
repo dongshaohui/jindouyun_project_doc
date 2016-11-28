@@ -2079,6 +2079,167 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/get_shop_detail_info_v2",
+    "title": "获取店铺信息详情",
+    "name": "________1",
+    "group": "Shop_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "shop_id",
+            "description": "<p>店铺id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageno",
+            "description": "<p>分页码，不填默认为第1页</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pagelength",
+            "description": "<p>页长，不填默认为全部</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "status",
+            "description": "<p>店铺状态（0-已关闭，1-营业中）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_img",
+            "description": "<p>商铺图片</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "name_cn",
+            "description": "<p>商铺中文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "name_en",
+            "description": "<p>商铺英文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_feature",
+            "description": "<p>商铺中文特色</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_feature_en",
+            "description": "<p>商铺英文特色</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "min_distribution_cost",
+            "description": "<p>最低配送费用</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object",
+            "optional": false,
+            "field": "shop_detail_info",
+            "description": "<p>店铺详情信息对象</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_detail_info.delivery_time",
+            "description": "<p>可配送时间</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_detail_info.phone",
+            "description": "<p>商家电话</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "shop_detail_info.address",
+            "description": "<p>商家地址</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\n   shop_detail_info:\n\t  {\n\t\t  delivery_time:'9:00-22:00',\n\t\t  phone:'55642220',\n\t\t  address:'XXX Street'\n\t  }\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>shopid无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'shopid无效',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Shop_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/get_shop_detail_info",
     "title": "获取店铺信息详情",
     "name": "________1",
