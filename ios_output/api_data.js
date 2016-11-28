@@ -2079,7 +2079,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_shop_detail_info_v2",
+    "url": "/user_serv/shop/get_shop_detail_info_v2",
     "title": "获取店铺信息详情",
     "name": "________1",
     "group": "Shop_Module",

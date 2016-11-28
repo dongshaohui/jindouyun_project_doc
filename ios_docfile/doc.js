@@ -875,7 +875,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/get_shop_detail_info_v2 获取店铺信息详情
+	 * @api {get} /user_serv/shop/get_shop_detail_info_v2 获取店铺信息详情
 	 * @apiName 获取店铺信息详情1
 	 * @apiGroup Shop_Module
 	 * @apiVersion 0.1.1
