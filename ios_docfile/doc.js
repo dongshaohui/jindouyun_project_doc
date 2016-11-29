@@ -240,6 +240,58 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/paytype_infos 获取用户支付管理信息
+	 * @apiName 获取用户支付管理信息1
+	 * @apiGroup User_Pay_Type_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {Object} paytype_infos 用户支付方式信息对象封装
+	 * @apiSuccess {int} paytype_infos.count 用户支付方式的种类数量
+	 * @apiSuccess {objcet[]} paytype_infos.infos 用户支付方式信息数组
+	 * @apiSuccess {int} paytype_infos.infos.paytype_id 支付方式id
+	 * @apiSuccess {Boolean} paytype_infos.infos.default_pay_type_tag 是否为默认支付方式
+	 * @apiSuccess {int} paytype_infos.infos.type 用户支付方式（0-信用卡，1-货到付款）
+	 * @apiSuccess {String} paytype_infos.infos.cardno （当type为0）信用卡卡号
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * paytype_infos:{
+	 *	count:2,
+	 *	infos:[
+	 *		{
+	 *			type:0,
+	 *			cardno:"1231436462"
+	 *		},
+	 *		{
+	 *			type:1
+	 *		}
+	 *	  ]
+	 *	}
+	 * }				
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
 	 * @api {get} /user_serv/select_paytype 用户选取支付方式
 	 * @apiName 用户选取支付方式11
 	 * @apiGroup User_Pay_Type_Module
@@ -409,6 +461,67 @@ public interface ApiDoc {
 	 * @apiSuccess {String} delivery_address_infos.receiver_phone 收货人电话
 	 * @apiSuccess {String} delivery_address_infos.postcode 邮编
 	 * @apiSuccess {String} delivery_address_infos.address 收货地址
+
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * 	  code:0,
+	 *    msg:'success',
+	 *    delivery_address_infos:{
+	 *	  count:2,
+	 *	  infos:[
+	 *		{
+	 *			delivery_address_id:12,
+	 *			receiver_name:'董绍辉',
+	 *			receiver_phone:"18922112441",
+	 *			postcode:"100000",
+	 *			address:"北京市四惠"
+	 *		},
+	 *		{
+	 *			delivery_address_id:13,
+	 *			receiver_name:'刘惠',
+	 *			receiver_phone:"18922100141",
+	 *			postcode:"100000",
+	 *			address:"北京市亚运村"
+	 *		}
+	 *	  ]
+	 *	}
+	 * }				
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
+	 * @api {get} /user_serv/delivery_address_infos 获取收货地址信息
+	 * @apiName 获取收货地址信息1
+	 * @apiGroup User_Address_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {Object} delivery_address_infos 用户支付方式信息对象封装
+	 * @apiSuccess {int} delivery_address_infos.delivery_address_id 收货地址id
+	 * @apiSuccess {Boolean} delivery_address_infos.default_addr_tag 是否为默认地址
+	 * @apiSuccess {String} delivery_address_infos.receiver_name 收货人姓名
+	 * @apiSuccess {String} delivery_address_infos.receiver_phone 收货人电话
+	 * @apiSuccess {String} delivery_address_infos.postcode 邮编
+	 * @apiSuccess {String} delivery_address_infos.address 收货地址
+
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
 	 * {
