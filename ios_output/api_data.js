@@ -253,6 +253,118 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/dish/get_all_side_dishes_v2",
+    "title": "获取某菜品所有配菜接口",
+    "name": "___________1",
+    "group": "Dish_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "dish_id",
+            "description": "<p>菜品id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "side_dish_info_list",
+            "description": "<p>返回菜品包含配菜数组</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "side_dish_property_list",
+            "description": "<p>返回菜品属性列表信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "side_dish_info_list.side_dish_id",
+            "description": "<p>配菜id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "side_dish_info_list.side_dish_cn_name",
+            "description": "<p>中文配菜名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "side_dish_info_list.side_dish_en_name",
+            "description": "<p>英文配菜名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "side_dish_info_list.side_dish_price",
+            "description": "<p>配菜价格</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nside_dish_info_list:[\n\t\t{\n\t\t\tside_dish_id:12,\t\n\t\t\tside_dish_name:\"花生米\",\n\t\t\tside_dish_price:3\n\t\t},\n\t\t{\n\t\t\tside_dish_id:13,\t\n\t\t\tside_dish_name:\"海带\",\n\t\t\tside_dish_price:4\n\t\t}\n    ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>dish_id无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'dish_id无效',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Dish_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/get_all_side_dishes",
     "title": "获取某菜品所有配菜接口",
     "name": "___________1",
@@ -2457,7 +2569,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos",
+    "url": "/user_serv/get_all_shop_infos_v2",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -2479,13 +2591,6 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "int",
-            "optional": false,
-            "field": "district_id",
-            "description": "<p>分区ID</p>"
           }
         ]
       }
@@ -2608,7 +2713,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos_v2",
+    "url": "/user_serv/get_all_shop_infos",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -2630,6 +2735,13 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "district_id",
+            "description": "<p>分区ID</p>"
           }
         ]
       }
@@ -3488,6 +3600,13 @@ define({ "api": [
             "optional": false,
             "field": "msg",
             "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配给用户的token</p>"
           }
         ]
       },
@@ -3591,13 +3710,6 @@ define({ "api": [
             "optional": false,
             "field": "msg",
             "description": "<p>消息说明</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "token",
-            "description": "<p>系统分配给用户的token</p>"
           }
         ]
       },

@@ -1120,6 +1120,56 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/dish/get_all_side_dishes_v2 获取某菜品所有配菜接口
+	 * @apiName 获取某菜品所有配菜接口1
+	 * @apiGroup Dish_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} dish_id 菜品id 
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} side_dish_info_list 返回菜品包含配菜数组
+	 * @apiSuccess {object[]} side_dish_property_list 返回菜品属性列表信息
+	 * @apiSuccess {int} side_dish_info_list.side_dish_id 配菜id
+	 * @apiSuccess {String} side_dish_info_list.side_dish_cn_name 中文配菜名称
+	 * @apiSuccess {String} side_dish_info_list.side_dish_en_name 英文配菜名称
+	 * @apiSuccess {float} side_dish_info_list.side_dish_price 配菜价格
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * side_dish_info_list:[
+	 *		{
+	 *			side_dish_id:12,	
+	 *			side_dish_name:"花生米",
+	 *			side_dish_price:3
+	 * 		},
+	 *		{
+	 *			side_dish_id:13,	
+	 *			side_dish_name:"海带",
+	 *			side_dish_price:4
+	 * 		}
+	 *     ]
+	 *  }
+	 *  @apiError -1 dish_id无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'dish_id无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	
+
+	/**
+	 * 
 	 * @api {get} /user_serv/get_dish_detail 获取菜品详情信息
 	 * @apiName 获取菜品详情信息2122222221
 	 * @apiGroup Dish_Module
