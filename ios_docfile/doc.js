@@ -1797,6 +1797,88 @@ public interface ApiDoc {
 	 * @throws Exception
 	 */	
 
+	/**
+	 * 
+	 * @api {get} /user_serv/dish/get_order_detail_info_v2 获取订单详情信息
+	 * @apiName 获取订单详情信息1
+	 * @apiGroup Order_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {int} order_id 订单id
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} delivery_address_id 收货地址id
+	 * @apiSuccess {int} paytype_id 支付方式id
+	 * @apiSuccess {int} consume_type 消费方式（0-配送，1-到店消费） 
+	 * @apiSuccess {int} tip_type 小费方式（0-小费比率，1-现金小费）
+	 * @apiSuccess {float} tip_ratio 小费百分比（如果tip_type为0）
+	 * @apiSuccess {text} remark 备注
+	 * @apiSuccess {object[]} dish_order_list 点餐列表
+	 * @apiSuccess {int} dish_order_list.dish_id 菜品id
+	 * @apiSuccess {int} dish_order_list.dish_type 菜品类型（0-单品菜，1-含配菜）
+	 * @apiSuccess {int} dish_order_list.order_number 菜品点了多少份
+	 * @apiSuccess {object[]} dish_order_list.side_dish_list 配菜列表（如果dish_type为1的话）
+	 * @apiSuccess {int} dish_order_list.side_dish_list.order_number 配菜点了多少份
+	 * @apiSuccess {int} dish_order_list.side_dish_list.side_dish_id 配菜id
+	 * @apiSuccess {object[]} dish_order_list.dish_property_list 菜品属性列表（如果dish_type为1的话）
+	 * @apiSuccess {int} dish_order_list.dish_property_list.dish_property_id 菜品属性ID
+	 * @apiSuccess {String} dish_order_list.dish_property_list.dish_property_desc 菜品属性描述
+	 * @apiSuccess {float} freight 运费
+	 * @apiSuccess {float} distance 商户距离用户的距离（调用接口，如果用户或商户没有传递地址信息，返回值为0，单位KM）
+	 * @apiSuccess {float} tax 税费
+	 * @apiSuccess {String} order_create_time 订单建立时间
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * delivery_address_id:1,
+	 * paytype_id:1,
+	 * consume_type:0,
+	 * tip_type:0,
+	 * tip_ratio:0.15,
+	 * remark:"no salt please!",
+	 *
+	 * dish_order_list:[
+	 *   {
+	 * 		dish_id:1,
+	 *		dish_type:1,
+	 *		order_number:1,
+	 *		side_dish_list:
+	 *		[
+	 *			{
+     *	 			order_number:1,
+     *				side_dish_id:1
+	 *			
+	 *		]
+	 *
+	 *   }
+	 *  ],
+	 *	
+	 *	freight:19,
+	 *	distance:12,
+	 *	tax:10.1,
+	 *	order_create_time:"2016-12-01 10:12:23"
+	 *
+	 *  }
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 order_id无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	
+
 
 	/**
 	 * 

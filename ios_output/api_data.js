@@ -1237,6 +1237,229 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/dish/get_order_detail_info_v2",
+    "title": "获取订单详情信息",
+    "name": "________1",
+    "group": "Order_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配的token</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "order_id",
+            "description": "<p>订单id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "delivery_address_id",
+            "description": "<p>收货地址id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "paytype_id",
+            "description": "<p>支付方式id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "consume_type",
+            "description": "<p>消费方式（0-配送，1-到店消费）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "tip_type",
+            "description": "<p>小费方式（0-小费比率，1-现金小费）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "tip_ratio",
+            "description": "<p>小费百分比（如果tip_type为0）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "text",
+            "optional": false,
+            "field": "remark",
+            "description": "<p>备注</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "dish_order_list",
+            "description": "<p>点餐列表</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_order_list.dish_id",
+            "description": "<p>菜品id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_order_list.dish_type",
+            "description": "<p>菜品类型（0-单品菜，1-含配菜）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_order_list.order_number",
+            "description": "<p>菜品点了多少份</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "dish_order_list.side_dish_list",
+            "description": "<p>配菜列表（如果dish_type为1的话）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_order_list.side_dish_list.order_number",
+            "description": "<p>配菜点了多少份</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_order_list.side_dish_list.side_dish_id",
+            "description": "<p>配菜id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "dish_order_list.dish_property_list",
+            "description": "<p>菜品属性列表（如果dish_type为1的话）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_order_list.dish_property_list.dish_property_id",
+            "description": "<p>菜品属性ID</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_order_list.dish_property_list.dish_property_desc",
+            "description": "<p>菜品属性描述</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "freight",
+            "description": "<p>运费</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "distance",
+            "description": "<p>商户距离用户的距离（调用接口，如果用户或商户没有传递地址信息，返回值为0，单位KM）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "tax",
+            "description": "<p>税费</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "order_create_time",
+            "description": "<p>订单建立时间</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\ndelivery_address_id:1,\npaytype_id:1,\nconsume_type:0,\ntip_type:0,\ntip_ratio:0.15,\nremark:\"no salt please!\",\n\ndish_order_list:[\n  {\n\t\tdish_id:1,\n\t\tdish_type:1,\n\t\torder_number:1,\n\t\tside_dish_list:\n\t\t[\n\t\t\t{\n\t \t\t\torder_number:1,\n\t\t\t\tside_dish_id:1\n\t\t\t\n\t\t]\n\n  }\n ],\n\t\n\tfreight:19,\n\tdistance:12,\n\ttax:10.1,\n\torder_create_time:\"2016-12-01 10:12:23\"\n\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>token失效，需重新登录</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-2",
+            "description": "<p>order_id无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'token失效，需重新登录',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Order_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/get_order_detail_info",
     "title": "获取订单详情信息",
     "name": "________1",
@@ -2569,7 +2792,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos_v2",
+    "url": "/user_serv/get_all_shop_infos",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -2591,6 +2814,13 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "district_id",
+            "description": "<p>分区ID</p>"
           }
         ]
       }
@@ -2713,7 +2943,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos",
+    "url": "/user_serv/get_all_shop_infos_v2",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -2735,13 +2965,6 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "int",
-            "optional": false,
-            "field": "district_id",
-            "description": "<p>分区ID</p>"
           }
         ]
       }
