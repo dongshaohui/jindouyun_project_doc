@@ -2792,6 +2792,73 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/shop/get_all_shop_infos",
+    "title": "获取店铺内支持支付方式接口",
+    "name": "_____________11",
+    "group": "Shop_Module",
+    "version": "0.1.0",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "shop_id",
+            "description": "<p>店铺ID</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "pay_types",
+            "description": "<p>返回店铺支持支付方式数组</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\nshop_info_list:[\n\t\t{\n\t\t\tshop_id:12,\t\n\t\t\timg:\"http://XXX.img\",\n\t\t\tname:\"XX牛肉面\",\n\t\t\taddress:\"XXX Street\",\n\t\t\tcurrent_month_order:\"112\"\n\t\t}\n   ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Shop_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/get_all_shop_infos",
     "title": "获取所有店铺的信息",
     "name": "______________11",

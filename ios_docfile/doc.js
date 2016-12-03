@@ -859,6 +859,47 @@ public interface ApiDoc {
 	 */	 	
 
 
+	/**
+	 * 
+	 * @api {get} /user_serv/shop/get_all_shop_infos 获取店铺内支持支付方式接口
+	 * @apiName 获取店铺内支持支付方式接口11
+	 * @apiGroup Shop_Module
+	 * @apiVersion 0.1.0
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} shop_id  店铺ID
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} pay_types 返回店铺支持支付方式数组
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * shop_info_list:[
+	 *		{
+	 *			shop_id:12,	
+	 *			img:"http://XXX.img",
+	 *			name:"XX牛肉面",
+	 *			address:"XXX Street",
+	 *			current_month_order:"112"
+	 * 		}
+	 *    ]
+	 *  }
+	 *  
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 	
+
+
 
 	/**
 	 * 
