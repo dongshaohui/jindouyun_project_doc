@@ -2792,7 +2792,7 @@
   },
   {
     "type": "get",
-    "url": "/user_serv/shop/get_all_shop_infos",
+    "url": "/user_serv/shop/get_shop_all_pay_types",
     "title": "获取店铺内支持支付方式接口",
     "name": "_____________11",
     "group": "Shop_Module",

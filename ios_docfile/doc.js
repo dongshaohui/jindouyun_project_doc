@@ -861,7 +861,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/shop/get_all_shop_infos 获取店铺内支持支付方式接口
+	 * @api {get} /user_serv/shop/get_shop_all_pay_types 获取店铺内支持支付方式接口
 	 * @apiName 获取店铺内支持支付方式接口11
 	 * @apiGroup Shop_Module
 	 * @apiVersion 0.1.0
