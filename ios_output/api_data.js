@@ -3129,7 +3129,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos",
+    "url": "/user_serv/get_all_shop_infos_v2",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -3151,13 +3151,6 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "int",
-            "optional": false,
-            "field": "district_id",
-            "description": "<p>分区ID</p>"
           }
         ]
       }
@@ -3280,7 +3273,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos_v2",
+    "url": "/user_serv/get_all_shop_infos",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -3302,6 +3295,13 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "district_id",
+            "description": "<p>分区ID</p>"
           }
         ]
       }
@@ -5129,6 +5129,125 @@ define({ "api": [
             "optional": false,
             "field": "-2",
             "description": "<p>paytype_id无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'token失效，需重新登录',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "User_Pay_Type_Module"
+  },
+  {
+    "type": "get",
+    "url": "/user_serv/pay/paytype_infos_v2",
+    "title": "获取用户支付管理信息",
+    "name": "__________1",
+    "group": "User_Pay_Type_Module",
+    "version": "0.1.2",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配的token</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "paytype_infos",
+            "description": "<p>用户支付方式信息对象封装</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "paytype_infos.count",
+            "description": "<p>用户支付方式的种类数量</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "objcet[]",
+            "optional": false,
+            "field": "paytype_infos.infos",
+            "description": "<p>用户支付方式信息数组</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "paytype_infos.infos.paytype_id",
+            "description": "<p>支付方式id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "paytype_infos.infos.default_pay_type_tag",
+            "description": "<p>是否为默认支付方式</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "paytype_infos.infos.type",
+            "description": "<p>用户支付方式（0-信用卡，1-货到付款）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "paytype_infos.infos.cardno",
+            "description": "<p>（当type为0）信用卡卡号</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\npaytype_infos:{\n\tcount:2,\n\tinfos:[\n\t\t{\n\t\t\ttype:0,\n\t\t\tcardno:\"1231436462\"\n\t\t},\n\t\t{\n\t\t\ttype:1\n\t\t}\n\t  ]\n\t}\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>token失效，需重新登录</p>"
           }
         ]
       },

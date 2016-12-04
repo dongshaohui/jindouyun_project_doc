@@ -292,6 +292,57 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/pay/paytype_infos_v2 获取用户支付管理信息
+	 * @apiName 获取用户支付管理信息1
+	 * @apiGroup User_Pay_Type_Module
+	 * @apiVersion 0.1.2
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {Object} paytype_infos 用户支付方式信息对象封装
+	 * @apiSuccess {int} paytype_infos.count 用户支付方式的种类数量
+	 * @apiSuccess {objcet[]} paytype_infos.infos 用户支付方式信息数组
+	 * @apiSuccess {int} paytype_infos.infos.paytype_id 支付方式id
+	 * @apiSuccess {Boolean} paytype_infos.infos.default_pay_type_tag 是否为默认支付方式
+	 * @apiSuccess {int} paytype_infos.infos.type 用户支付方式（0-信用卡，1-货到付款）
+	 * @apiSuccess {String} paytype_infos.infos.cardno （当type为0）信用卡卡号
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * paytype_infos:{
+	 *	count:2,
+	 *	infos:[
+	 *		{
+	 *			type:0,
+	 *			cardno:"1231436462"
+	 *		},
+	 *		{
+	 *			type:1
+	 *		}
+	 *	  ]
+	 *	}
+	 * }				
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+	/**
+	 * 
 	 * @api {get} /user_serv/select_paytype 用户选取支付方式
 	 * @apiName 用户选取支付方式11
 	 * @apiGroup User_Pay_Type_Module
