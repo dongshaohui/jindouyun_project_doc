@@ -563,7 +563,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/add_delivery_addres 新增收货地址
+	 * @api {get} /user_serv/add_delivery_address 新增收货地址
 	 * @apiName 新增收货地址1
 	 * @apiGroup User_Address_Module
 	 * @apiVersion 0.1.0
@@ -599,6 +599,47 @@ public interface ApiDoc {
 	 * @return
 	 * @throws Exception
 	 */
+
+	/**
+	 * 
+	 * @api {post} /user_serv/address/add_delivery_address_v2 新增收货地址
+	 * @apiName 新增收货地址1
+	 * @apiGroup User_Address_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {String} receiver_name 收货人姓名
+	 * @apiParam {String} receiver_phone 收货人电话 
+	 * @apiParam {String} searched_address 搜索地址（google生成，见<code>地点搜索接口</code>）
+	 * @apiParam {float} searched_address_longitude 搜索地址的经度（google生成，见<code>地点搜索接口</code>）
+	 * @apiParam {float} searched_address_latitude 搜索地址的纬度（google生成，见<code>地点搜索接口</code>）
+	 * @apiParam {text} detail_address 补充详细地址（如:XX小区16楼26号）
+	 * @apiParam {String} postcode 邮编
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
 
 	/**
 	 * 
