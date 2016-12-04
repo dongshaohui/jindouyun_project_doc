@@ -998,6 +998,115 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/user_serv/order/calculate_freight_v2",
+    "title": "计算运费",
+    "name": "____1",
+    "group": "Order_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "shop_id",
+            "description": "<p>商户id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "total_price",
+            "description": "<p>订单金额</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "float",
+            "optional": false,
+            "field": "distance",
+            "description": "<p>商户距送货地址距离</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "freight_price",
+            "description": "<p>运费</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\ndistance:'4.5',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>shop_id无效</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-2",
+            "description": "<p>delivery_address_id无效</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-3",
+            "description": "<p>商户尚没有上传地址</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-4",
+            "description": "<p>收货地址无法计算距离</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'shop_id无效',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Order_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/upload_order_v2",
     "title": "用户提交订单",
     "name": "______1",
@@ -3020,7 +3129,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos_v2",
+    "url": "/user_serv/get_all_shop_infos",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -3042,6 +3151,13 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "district_id",
+            "description": "<p>分区ID</p>"
           }
         ]
       }
@@ -3164,7 +3280,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/user_serv/get_all_shop_infos",
+    "url": "/user_serv/get_all_shop_infos_v2",
     "title": "获取所有店铺的信息",
     "name": "______________11",
     "group": "Shop_Module",
@@ -3186,13 +3302,6 @@ define({ "api": [
             "optional": false,
             "field": "pagelength",
             "description": "<p>页长，不填默认为全部</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "int",
-            "optional": false,
-            "field": "district_id",
-            "description": "<p>分区ID</p>"
           }
         ]
       }

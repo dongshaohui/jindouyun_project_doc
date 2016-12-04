@@ -1802,6 +1802,45 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {get} /user_serv/order/calculate_freight_v2 计算运费
+	 * @apiName 计算运费1
+	 * @apiGroup Order_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} shop_id 商户id 
+	 * @apiParam {float} total_price 订单金额 
+	 * @apiParam {float} distance 商户距送货地址距离
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {float} freight_price 运费
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * distance:'4.5',
+	 *  }
+	 *  @apiError -1 shop_id无效
+	 *  @apiError -2 delivery_address_id无效
+	 *  @apiError -3 商户尚没有上传地址
+	 *  @apiError -4 收货地址无法计算距离
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shop_id无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+	/**
+	 * 
 	 * @api {get} /user_serv/get_all_orders 获取用户所有的订单信息
 	 * @apiName 获取用户所有的订单信息1
 	 * @apiGroup Order_Module
