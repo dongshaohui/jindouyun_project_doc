@@ -445,6 +445,49 @@ public interface ApiDoc {
 
 	/**
 	 * 
+	 * @api {POST} /user_serv/pay/add_credit_card_v2 新增信用卡接口
+	 * @apiName 新增信用卡接口1
+	 * @apiGroup User_Pay_Type_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {String} credit_card_no 信用卡卡号
+	 * @apiParam {String} pin_code PIN码（3-4位） 
+	 * @apiParam {String} expire_year 过期年份（YYYY） 
+	 * @apiParam {String} expire_month 过期月份（MM）
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {int} pay_type_id pay_type的id
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 *  }
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiError -2 此信用卡已经添加过
+	 *  @apiError -3 PIN码格式错误
+	 *  @apiError -4 过期年份格式错误
+	 *  @apiError -5 过期月份格式错误
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+
+	/**
+	 * 
 	 * @api {get} /user_serv/delivery_address_infos 获取收货地址信息
 	 * @apiName 获取收货地址信息1
 	 * @apiGroup User_Address_Module

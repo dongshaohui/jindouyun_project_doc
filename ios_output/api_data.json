@@ -4142,6 +4142,13 @@
             "optional": false,
             "field": "msg",
             "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配给用户的token</p>"
           }
         ]
       },
@@ -4245,13 +4252,6 @@
             "optional": false,
             "field": "msg",
             "description": "<p>消息说明</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "token",
-            "description": "<p>系统分配给用户的token</p>"
           }
         ]
       },
@@ -4532,6 +4532,135 @@
             "optional": false,
             "field": "-2",
             "description": "<p>paytype_id无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'token失效，需重新登录',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "User_Pay_Type_Module"
+  },
+  {
+    "type": "POST",
+    "url": "/user_serv/pay/add_credit_card_v2",
+    "title": "新增信用卡接口",
+    "name": "_______1",
+    "group": "User_Pay_Type_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>系统分配的token</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "credit_card_no",
+            "description": "<p>信用卡卡号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pin_code",
+            "description": "<p>PIN码（3-4位）</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "expire_year",
+            "description": "<p>过期年份（YYYY）</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "expire_month",
+            "description": "<p>过期月份（MM）</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "pay_type_id",
+            "description": "<p>pay_type的id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>token失效，需重新登录</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-2",
+            "description": "<p>此信用卡已经添加过</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-3",
+            "description": "<p>PIN码格式错误</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-4",
+            "description": "<p>过期年份格式错误</p>"
+          },
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-5",
+            "description": "<p>过期月份格式错误</p>"
           }
         ]
       },
