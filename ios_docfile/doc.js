@@ -866,7 +866,7 @@ public interface ApiDoc {
 	 * @apiGroup Shop_Module
 	 * @apiVersion 0.1.0
 	 * @apiDescription 接口详细描述
-	 * 
+	 * 	
 	 * 
 	 * @apiParam {int} shop_id  店铺ID
 	 *
@@ -1341,6 +1341,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} dish_name_en 英文名称
 	 * @apiSuccess {String} dish_img 图片地址
 	 * @apiSuccess {String} dish_price 菜品价格
+	 * @apiSuccess {float} dish_order_checkout_thres 菜品成菜下限（只对含配菜菜品有效）
 	 * @apiSuccess {String} current_month_order 本月订单量
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK

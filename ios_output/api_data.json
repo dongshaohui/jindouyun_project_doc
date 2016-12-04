@@ -214,6 +214,13 @@
           },
           {
             "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "dish_order_checkout_thres",
+            "description": "<p>菜品成菜下限（只对含配菜菜品有效）</p>"
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "current_month_order",
