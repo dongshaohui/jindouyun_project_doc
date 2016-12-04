@@ -1,6 +1,153 @@
 [
   {
     "type": "get",
+    "url": "/user_serv/dish/search_dishes_v2",
+    "title": "菜品搜索接口",
+    "name": "______1",
+    "group": "Dish_Module",
+    "version": "0.1.1",
+    "description": "<p>接口详细描述</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "shop_id",
+            "description": "<p>店铺id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "dish_search_term",
+            "description": "<p>菜品搜索关键词</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>结果码</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>消息说明</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "object[]",
+            "optional": false,
+            "field": "dish_info_list",
+            "description": "<p>返回店铺菜品信息数组</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_info_list.dish_id",
+            "description": "<p>菜品id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_info_list.dish_type",
+            "description": "<p>菜品类型（0-单品菜，1-含配菜）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_info_list.dish_img",
+            "description": "<p>菜品图片地址</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_info_list.dish_cn_name",
+            "description": "<p>菜品中文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "dish_info_list.dish_en_name",
+            "description": "<p>菜品英文名称</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "dish_info_list.dish_order_checkout_thres",
+            "description": "<p>菜品成菜价格下限（只对含配菜有效）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "dish_info_list.dish_order_types_checkout_thres",
+            "description": "<p>菜品成菜配菜种类下限（只对含配菜有效）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "int",
+            "optional": false,
+            "field": "dish_info_list.current_month_order",
+            "description": "<p>菜品当月订单数</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
+            "field": "dish_info_list.dish_price",
+            "description": "<p>菜品价格（如果<code>dish_type</code>为<code>0</code>）</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " HTTP/1.1 200 OK\n{\ncode:0,\nmsg:'success',\ndish_info_list:[\n\t\t{\n\t\t\tdish_id:12,\t\n\t\t\tdish_type:0,\n\t\t\tdish_img:\"http://XXX.jpg\",\n\t\t\tdish_name:\"XX牛肉面\",\n\t\t\tcurrent_month_order:11,\n\t\t\tdish_price:13.2\n\t\t},\n\t\t{\n\t\t\tdish_id:13,\t\n\t\t\tdish_type:1,\n\t\t\tdish_img:\"http://XXX.jpg\",\n\t\t\tdish_name:\"麻辣烫\",\n\t\t\tcurrent_month_order:41,\n\t\t}\n    ]\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "-1",
+            "description": "<p>shopid无效</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 400 Not Found\n{\n code:-1,\n msg:'shopid无效',\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "ios_docfile/doc.js",
+    "groupTitle": "Dish_Module"
+  },
+  {
+    "type": "get",
     "url": "/user_serv/search_dishes",
     "title": "菜品搜索接口",
     "name": "______1",

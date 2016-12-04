@@ -1253,6 +1253,66 @@ public interface ApiDoc {
 	 * @throws Exception
 	 */	 
 
+	/**
+	 * 
+	 * @api {get} /user_serv/dish/search_dishes_v2 菜品搜索接口
+	 * @apiName 菜品搜索接口1
+	 * @apiGroup Dish_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {int} shop_id 店铺id 
+	 * @apiParam {String} dish_search_term 菜品搜索关键词 
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {object[]} dish_info_list 返回店铺菜品信息数组
+	 * @apiSuccess {int} dish_info_list.dish_id 菜品id
+	 * @apiSuccess {int} dish_info_list.dish_type 菜品类型（0-单品菜，1-含配菜）
+	 * @apiSuccess {String} dish_info_list.dish_img 菜品图片地址
+	 * @apiSuccess {String} dish_info_list.dish_cn_name 菜品中文名称
+	 * @apiSuccess {String} dish_info_list.dish_en_name 菜品英文名称
+	 * @apiSuccess {float} dish_info_list.dish_order_checkout_thres 菜品成菜价格下限（只对含配菜有效）
+	 * @apiSuccess {float} dish_info_list.dish_order_types_checkout_thres 菜品成菜配菜种类下限（只对含配菜有效）	 
+	 * @apiSuccess {int} dish_info_list.current_month_order 菜品当月订单数
+	 * @apiSuccess {float} dish_info_list.dish_price 菜品价格（如果<code>dish_type</code>为<code>0</code>）
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * dish_info_list:[
+	 *		{
+	 *			dish_id:12,	
+	 *			dish_type:0,
+	 *			dish_img:"http://XXX.jpg",
+	 *			dish_name:"XX牛肉面",
+	 *			current_month_order:11,
+	 *			dish_price:13.2
+	 * 		},
+	 *		{
+	 *			dish_id:13,	
+	 *			dish_type:1,
+	 *			dish_img:"http://XXX.jpg",
+	 *			dish_name:"麻辣烫",
+	 *			current_month_order:41,
+	 * 		}
+	 *     ]
+	 *  }
+	 *  @apiError -1 shopid无效
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shopid无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */	 
+
 
 	/**
 	 * 
