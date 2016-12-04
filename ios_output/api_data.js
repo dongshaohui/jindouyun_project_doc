@@ -76,14 +76,14 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "dish_info_list.dish_cn_name",
+            "field": "dish_info_list.dish_name_cn",
             "description": "<p>菜品中文名称</p>"
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "dish_info_list.dish_en_name",
+            "field": "dish_info_list.dish_name_en",
             "description": "<p>菜品英文名称</p>"
           },
           {

@@ -1271,8 +1271,8 @@ public interface ApiDoc {
 	 * @apiSuccess {int} dish_info_list.dish_id 菜品id
 	 * @apiSuccess {int} dish_info_list.dish_type 菜品类型（0-单品菜，1-含配菜）
 	 * @apiSuccess {String} dish_info_list.dish_img 菜品图片地址
-	 * @apiSuccess {String} dish_info_list.dish_cn_name 菜品中文名称
-	 * @apiSuccess {String} dish_info_list.dish_en_name 菜品英文名称
+	 * @apiSuccess {String} dish_info_list.dish_name_cn 菜品中文名称
+	 * @apiSuccess {String} dish_info_list.dish_name_en 菜品英文名称
 	 * @apiSuccess {float} dish_info_list.dish_order_checkout_thres 菜品成菜价格下限（只对含配菜有效）
 	 * @apiSuccess {float} dish_info_list.dish_order_types_checkout_thres 菜品成菜配菜种类下限（只对含配菜有效）	 
 	 * @apiSuccess {int} dish_info_list.current_month_order 菜品当月订单数
