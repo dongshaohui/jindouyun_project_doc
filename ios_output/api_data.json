@@ -664,6 +664,13 @@
             "group": "Success 200",
             "type": "float",
             "optional": false,
+            "field": "dish_info.dish_order_types_checkout_thres",
+            "description": "<p>菜品成菜配菜种类下限（只对含配菜有效）</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "float",
+            "optional": false,
             "field": "dish_info.dish_price",
             "description": "<p>菜品价格（如果<code>dish_type</code>为<code>0</code>）</p>"
           }

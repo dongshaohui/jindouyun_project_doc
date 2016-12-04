@@ -1437,6 +1437,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} dish_info.dish_name_en 英文菜品名称
 	 * @apiSuccess {int} dish_info.current_month_order 菜品当月订单数
 	 * @apiSuccess {float} dish_info.dish_order_checkout_thres 菜品成菜价格下限（只对含配菜有效）
+	 * @apiSuccess {float} dish_info.dish_order_types_checkout_thres 菜品成菜配菜种类下限（只对含配菜有效）
 	 * @apiSuccess {float} dish_info.dish_price 菜品价格（如果<code>dish_type</code>为<code>0</code>）
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
