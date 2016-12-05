@@ -341,6 +341,113 @@ public interface ApiDoc {
 	 * @throws Exception
 	 */
 
+
+	/**
+	 * 
+	 * @api {get} /user_serv/pay/get_default_selected_credit_card 获取用户默认信用卡
+	 * @apiName 获取用户默认信用卡112
+	 * @apiGroup User_Pay_Type_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {Object} default_credit_card_info 用户默认信用卡对象
+	 * @apiSuccess {String} default_credit_card_info.credit_card 信用卡卡号
+	 * @apiSuccess {String} default_credit_card_info.security_code 信用卡安全码
+	 * @apiSuccess {String} default_credit_card_info.credit_card_brand 信用卡商标	
+	 * @apiSuccess {String} default_credit_card_info.credit_card_mask 信用卡掩码（即带星号的信用卡号码）		
+	 * @apiSuccess {String} default_credit_card_info.expire_year 过期年	
+	 * @apiSuccess {String} default_credit_card_info.expire_month 过期月		
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * paytype_infos:{
+	 *	count:2,
+	 *	infos:[
+	 *		{
+	 *			type:0,
+	 *			cardno:"1231436462"
+	 *		},
+	 *		{
+	 *			type:1
+	 *		}
+	 *	  ]
+	 *	}
+	 * }				
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
+	 * @api {get} /user_serv/pay/get_credit_card_list 获取用户信用卡列表
+	 * @apiName 获取用户信用卡列表11234
+	 * @apiGroup User_Pay_Type_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * @apiParam {String} token 系统分配的token
+	 * 
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {Object[]} credit_card_list 用户信用卡对象列表
+	 * @apiSuccess {String} credit_card_list.credit_card 信用卡卡号
+	 * @apiSuccess {String} credit_card_list.security_code 信用卡安全码
+	 * @apiSuccess {String} credit_card_list.credit_card_brand 信用卡商标	
+	 * @apiSuccess {String} credit_card_list.credit_card_mask 信用卡掩码（即带星号的信用卡号码）		
+	 * @apiSuccess {String} credit_card_list.expire_year 过期年	
+	 * @apiSuccess {String} credit_card_list.expire_month 过期月		
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * paytype_infos:{
+	 *	count:2,
+	 *	infos:[
+	 *		{
+	 *			type:0,
+	 *			cardno:"1231436462"
+	 *		},
+	 *		{
+	 *			type:1
+	 *		}
+	 *	  ]
+	 *	}
+	 * }				
+	 *  
+	 *  @apiError -1 token失效，需重新登录
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'token失效，需重新登录',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+
+
 	/**
 	 * 
 	 * @api {get} /user_serv/select_paytype 用户选取支付方式
@@ -1867,6 +1974,45 @@ public interface ApiDoc {
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {float} freight_price 运费
+	 * @apiSuccessExample Success-Response:
+	 *  HTTP/1.1 200 OK
+	 * {
+	 * code:0,
+	 * msg:'success',
+	 * distance:'4.5',
+	 *  }
+	 *  @apiError -1 shop_id无效
+	 *  @apiError -2 delivery_address_id无效
+	 *  @apiError -3 商户尚没有上传地址
+	 *  @apiError -4 收货地址无法计算距离
+	 *  @apiErrorExample {json} Error-Response:
+	 *  HTTP/1.1 400 Not Found
+	 *  {
+	 *   code:-1,
+	 *   msg:'shop_id无效',
+	 *   }
+	 *      
+	 * @param param
+	 * @return
+	 * @throws Exception
+	 */
+
+
+	/**
+	 * 
+	 * @api {get} /user_serv/order/calculate_tip 计算小费
+	 * @apiName 计算小费1121
+	 * @apiGroup Order_Module
+	 * @apiVersion 0.1.1
+	 * @apiDescription 接口详细描述
+	 * 
+	 * 
+	 * @apiParam {float} total_dish_price 菜金总价
+	 * @apiParam {float} tip_ratio 小费比例
+	 *
+	 * @apiSuccess {String} code 结果码
+	 * @apiSuccess {String} msg 消息说明
+	 * @apiSuccess {float} tip_fee 小费金额
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
 	 * {
