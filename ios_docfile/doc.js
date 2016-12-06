@@ -817,6 +817,7 @@ public interface ApiDoc {
 	 * @apiParam {float} searched_address_latitude 搜索地址的纬度（google生成，见<code>地点搜索接口</code>）
 	 * @apiParam {text} detail_address 补充详细地址（如:XX小区16楼26号）
 	 * @apiParam {String} postcode 邮编
+	 * @apiParam {int} default_tag 是否为默认地址 0-不是默认 1-是默认
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
