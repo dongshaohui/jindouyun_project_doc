@@ -1000,7 +1000,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/get_all_shop_infos_v2 获取所有店铺的信息
+	 * @api {get} /user_serv/shop/get_all_district_shop_infos_v2 获取所有店铺的信息
 	 * @apiName 获取所有正在营业中店铺的信息11
 	 * @apiGroup Shop_Module
 	 * @apiVersion 0.1.1
