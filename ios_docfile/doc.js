@@ -396,7 +396,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/pay/get_credit_card_list 获取用户信用卡列表
+	 * @api {get} /user_serv/pay/credit_card_list 获取用户信用卡列表
 	 * @apiName 获取用户信用卡列表11234
 	 * @apiGroup User_Pay_Type_Module
 	 * @apiVersion 0.1.1
@@ -407,6 +407,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {Object[]} credit_card_list 用户信用卡对象列表
+  	 * @apiSuccess {int} credit_card_list.paytype_id 信用卡支付对应的paytype_id
 	 * @apiSuccess {String} credit_card_list.credit_card 信用卡卡号
 	 * @apiSuccess {String} credit_card_list.security_code 信用卡安全码
 	 * @apiSuccess {String} credit_card_list.credit_card_brand 信用卡商标	
