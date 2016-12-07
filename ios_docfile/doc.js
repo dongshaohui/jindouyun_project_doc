@@ -407,7 +407,7 @@ public interface ApiDoc {
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
 	 * @apiSuccess {Object[]} credit_card_list 用户信用卡对象列表
-  	 * @apiSuccess {int} credit_card_list.paytype_id 信用卡支付对应的paytype_id
+  	 * @apiSuccess {int} credit_card_list.paytype_id 信用卡支付对应的paytype_id 	
 	 * @apiSuccess {String} credit_card_list.credit_card 信用卡卡号
 	 * @apiSuccess {String} credit_card_list.security_code 信用卡安全码
 	 * @apiSuccess {String} credit_card_list.credit_card_brand 信用卡商标	
@@ -1852,7 +1852,7 @@ public interface ApiDoc {
 	 * @apiParam {object[]} dish_order_list.dish_property_list 菜品属性列表（如果dish_type为1的话）
 	 * @apiParam {int} dish_order_list.dish_property_list.dish_property_id 菜品属性ID
 	 * @apiParam {float} distance 商户距离用户的距离（调用接口，如果用户或商户没有传递地址信息，返回值为0，单位KM）
-
+	 * @apiParam {String} current_datetime 客户端当前时间（2016-12-01 12:01:01）
 	 * 
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
