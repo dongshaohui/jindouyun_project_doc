@@ -307,7 +307,7 @@ public interface ApiDoc {
 	 * @apiSuccess {objcet[]} paytype_infos.infos 用户支付方式信息数组
 	 * @apiSuccess {int} paytype_infos.infos.paytype_id 支付方式id
 	 * @apiSuccess {Boolean} paytype_infos.infos.default_pay_type_tag 是否为默认支付方式
-	 * @apiSuccess {int} paytype_infos.infos.type 用户支付方式（0-信用卡，1-货到付款）
+	 * @apiSuccess {int} paytype_infos.infos.type 用户支付方式（0-信用卡，1-货到付款(现金)，2-微信）
 	 * @apiSuccess {String} paytype_infos.infos.cardno （当type为0）信用卡卡号
 	 * @apiSuccessExample Success-Response:
 	 *  HTTP/1.1 200 OK
