@@ -1828,7 +1828,7 @@ public interface ApiDoc {
 
 	/**
 	 * 
-	 * @api {get} /user_serv/upload_order_v2 用户提交订单
+	 * @api {get} /user_serv/order/upload_order_v2 用户提交订单
 	 * @apiName 用户提交订单1
 	 * @apiGroup Order_Module
 	 * @apiVersion 0.1.1
