@@ -1009,6 +1009,7 @@ public interface ApiDoc {
 	 * 
 	 * @apiParam {int} pageno 分页码，不填默认为第1页
 	 * @apiParam {int} pagelength  页长，不填默认为全部
+	 * @apiParam {int} district_id  分区ID
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
