@@ -2137,6 +2137,8 @@ public interface ApiDoc {
 	 * 
 	 * 
 	 * @apiParam {String} token 系统分配的token
+	 * @apiParam {int} pageno 页面编号，不填默认为1
+	 * @apiParam {int} pagelength 页面长度，不填默认为20	
 	 *
 	 * @apiSuccess {String} code 结果码
 	 * @apiSuccess {String} msg 消息说明
